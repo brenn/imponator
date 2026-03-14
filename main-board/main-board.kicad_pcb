@@ -9,8 +9,8 @@
 	(paper "A4")
 	(title_block
 		(title "Retro Imponator - Omega")
-		(date "2026-03-01")
-		(rev "1.0")
+		(date "2026-03-14")
+		(rev "1.1")
 		(company "Erik Brenn, 2026")
 	)
 	(layers
@@ -202,7 +202,7 @@
 			(unlocked yes)
 			(layer "F.SilkS")
 			(hide yes)
-			(uuid "88f47837-7a48-41de-9e5f-43541972b63f")
+			(uuid "bc1eed66-a530-4f2a-a8df-fe232915ba2a")
 			(effects
 				(font
 					(size 1 1)
@@ -214,7 +214,7 @@
 			(at 4.0005 7.5565 0)
 			(unlocked yes)
 			(layer "F.SilkS")
-			(uuid "d50ee199-6760-43bb-9cb0-f1782e8c29b3")
+			(uuid "7312d96b-49d3-491b-8a2f-5d986d9afab8")
 			(effects
 				(font
 					(size 1 1)
@@ -227,7 +227,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "6cd73081-5b9f-4b0d-8883-7432baaa4521")
+			(uuid "282be7e1-1f51-4139-b11a-4791afaa4138")
 			(effects
 				(font
 					(size 1 1)
@@ -240,7 +240,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "3832321f-354e-426e-9b9f-5f64b87f75db")
+			(uuid "ddd083c0-9ab3-4338-ae63-f4d8b8044002")
 			(effects
 				(font
 					(size 1 1)
@@ -300,7 +300,7 @@
 				(type default)
 			)
 			(layer "F.SilkS")
-			(uuid "ea4daf46-b407-4367-b650-282a418ace96")
+			(uuid "32a1de39-038c-441e-b52d-b4443e72369c")
 		)
 		(fp_line
 			(start -1.38964 1.776712)
@@ -310,7 +310,7 @@
 				(type default)
 			)
 			(layer "F.SilkS")
-			(uuid "2b2861fd-5b14-405d-aa67-737ffb908ffc")
+			(uuid "6b214fb2-ec5f-47d7-afe3-6bd0b21f4e36")
 		)
 		(fp_line
 			(start 9.525 -1.016)
@@ -320,7 +320,7 @@
 				(type default)
 			)
 			(layer "F.SilkS")
-			(uuid "f9def4dc-1367-4ad6-9c5e-122b8bf6a9ba")
+			(uuid "4e686a81-5f01-4279-891d-3af3ea6fa102")
 		)
 		(fp_rect
 			(start -4.318 -1.016)
@@ -331,7 +331,7 @@
 			)
 			(fill no)
 			(layer "F.SilkS")
-			(uuid "3176a169-9afb-4db0-b331-1fefa7f0f0cb")
+			(uuid "e2242cfe-4eaa-473d-9cfd-c6f1baec47c1")
 		)
 		(fp_arc
 			(start 9.525 1.905)
@@ -342,7 +342,7 @@
 				(type default)
 			)
 			(layer "F.SilkS")
-			(uuid "75fa32c4-11eb-499b-b1a5-057f9f9269a1")
+			(uuid "7d0eb604-ddef-4f79-af21-86530ecb93ed")
 		)
 		(fp_rect
 			(start -4.191 -1.016)
@@ -353,7 +353,7 @@
 			)
 			(fill no)
 			(layer "F.CrtYd")
-			(uuid "0a25375d-b566-467a-b040-d2f090efae9b")
+			(uuid "c6b53f44-bba6-4970-8217-90724936cc4c")
 		)
 		(fp_line
 			(start -1.524 -1.016)
@@ -363,7 +363,7 @@
 				(type solid)
 			)
 			(layer "F.Fab")
-			(uuid "a468235c-f327-4ee1-9a11-b82494aad8a0")
+			(uuid "470c407d-d10b-409b-a25b-eb6bdfef097e")
 		)
 		(fp_line
 			(start -1.524 10.541)
@@ -373,7 +373,7 @@
 				(type solid)
 			)
 			(layer "F.Fab")
-			(uuid "8d6764af-7322-45fb-a6f1-172cacd76e08")
+			(uuid "6a6f9444-30e6-46c6-b3d9-9b0f63846195")
 		)
 		(fp_line
 			(start 9.525 -1.016)
@@ -383,7 +383,7 @@
 				(type solid)
 			)
 			(layer "F.Fab")
-			(uuid "97eb46ba-7b44-40c0-9244-54ea2903af2c")
+			(uuid "9b7828c8-6767-436f-8c66-2540c3d14385")
 		)
 		(fp_arc
 			(start 9.525 1.71152)
@@ -394,7 +394,7 @@
 				(type default)
 			)
 			(layer "F.Fab")
-			(uuid "00cda8a3-702f-4253-b84d-e3df01f97f23")
+			(uuid "afac958f-4a4e-4070-a74d-c629d5a0a5ca")
 		)
 		(fp_curve
 			(pts
@@ -405,7 +405,7 @@
 				(type solid)
 			)
 			(layer "F.Fab")
-			(uuid "a34bbffc-972c-4af0-a4d9-2764ce50f137")
+			(uuid "cfe04a84-af75-475e-a7ea-4308968b75c8")
 		)
 		(fp_text user "${REFERENCE}"
 			(at 3.936 5.588 0)
@@ -419,19 +419,21 @@
 				)
 			)
 		)
-		(pad "" np_thru_hole oval
+		(pad "" thru_hole oval
 			(at -1 10)
-			(size 1.6 1.2)
-			(drill 0.8)
+			(size 2 1.6)
+			(drill 1.2)
 			(layers "*.Cu" "*.Mask")
-			(uuid "3d24c231-0f37-43bd-ad9a-1323006a6bc1")
+			(remove_unused_layers no)
+			(uuid "29c2b336-2c9e-40cc-b7a3-c130b9394f61")
 		)
-		(pad "" np_thru_hole oval
+		(pad "" thru_hole oval
 			(at 9 10)
-			(size 1.6 1.2)
-			(drill 0.8)
+			(size 2 1.6)
+			(drill 1.2)
 			(layers "*.Cu" "*.Mask")
-			(uuid "6dfdc5b7-c77d-40fb-8c57-b9d56f7c12a1")
+			(remove_unused_layers no)
+			(uuid "3a1907a3-6ffb-4a57-bc00-f9c5f02fe2cc")
 		)
 		(pad "1" thru_hole oval
 			(at 0 0)
