@@ -5627,6 +5627,18 @@
 		)
 		(uuid "b7ff3a8b-a0a9-4ab5-906b-48d095dae295")
 	)
+	(text "ALLE FOOTPRINTS ENDRET"
+		(exclude_from_sim no)
+		(at 62.23 127.635 0)
+		(effects
+			(font
+				(size 4 4)
+				(thickness 0.8)
+				(bold yes)
+			)
+		)
+		(uuid "ca55f173-575c-4736-a75b-3bdcb8c8dc46")
+	)
 	(junction
 		(at 193.04 66.04)
 		(diameter 0)

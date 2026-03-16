@@ -8074,7 +8074,7 @@
 			(net 5 "+5V")
 			(pinfunction "VO")
 			(pintype "power_out")
-			(uuid "2dcb18d5-d842-429e-a9b0-70438f019d8a")
+			(uuid "4ea4b1d2-37c8-4ab2-83aa-b973e5fafb70")
 		)
 		(pad "3" smd roundrect
 			(at -3.15 2.3 180)
@@ -12703,7 +12703,7 @@
 		)
 	)
 	(gr_text "2N7000 x 8"
-		(at 183.007 59.563 0)
+		(at 179.832 59.182 0)
 		(layer "F.SilkS")
 		(uuid "485164f9-97a9-48d3-8bba-41947c0d74c7")
 		(effects
@@ -12738,7 +12738,7 @@
 		)
 	)
 	(gr_text "NTH 1992 Imponator\nRerun 2026\nErik Brenn"
-		(at 167.513 106.553 0)
+		(at 168.91 106.172 0)
 		(layer "F.SilkS")
 		(uuid "a5328267-eda7-4024-8d6e-ea7a27e094f0")
 		(effects
@@ -12750,7 +12750,7 @@
 		)
 	)
 	(gr_text "Rev 1.1"
-		(at 177.038 106.426 0)
+		(at 189.484 101.6 0)
 		(layer "F.SilkS")
 		(uuid "d0d156b3-0483-439a-a654-c4ec6a379b4a")
 		(effects
