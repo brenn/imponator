@@ -1,5 +1,8 @@
 .fleet
 
+/main-board/.history
+/led-board/.history
+
 # Temporary files
 *.000
 *.bak
