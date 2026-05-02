@@ -4881,7 +4881,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "ezee-symbols:TestPoint_Hook"
+		(symbol "kicad-ezee-symbols:TestPoint_Hook"
 			(pin_numbers
 				(hide yes)
 			)
@@ -11022,12 +11022,12 @@
 		)
 	)
 	(symbol
-		(lib_id "ezee-symbols:TestPoint_Hook")
+		(lib_id "kicad-ezee-symbols:TestPoint_Hook")
 		(at 26.67 149.86 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom no)
+		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -11055,7 +11055,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "ezee-footprints:TestPoint_Hook"
+		(property "Footprint" "kicad-ezee-footprints:TestPoint_Hook"
 			(at 21.717 147.32 0)
 			(hide yes)
 			(show_name no)
@@ -11818,7 +11818,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "ezee-footprints:TestPoint_Pad_D1.0mm"
+		(property "Footprint" "kicad-ezee-footprints:TestPoint_Pad_D1.0mm"
 			(at 80.01 60.96 0)
 			(hide yes)
 			(show_name no)
@@ -13332,7 +13332,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "ezee-footprints:Battery_Terminals"
+		(property "Footprint" "kicad-ezee-footprints:Battery_Terminals"
 			(at 20.32 144.78 0)
 			(hide yes)
 			(show_name no)
@@ -14496,12 +14496,12 @@
 		)
 	)
 	(symbol
-		(lib_id "ezee-symbols:TestPoint_Hook")
+		(lib_id "kicad-ezee-symbols:TestPoint_Hook")
 		(at 26.67 143.51 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom no)
+		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -14529,7 +14529,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "ezee-footprints:TestPoint_Hook"
+		(property "Footprint" "kicad-ezee-footprints:TestPoint_Hook"
 			(at 31.623 146.05 0)
 			(hide yes)
 			(show_name no)
@@ -15238,7 +15238,7 @@
 				)
 			)
 		)
-		(property "Footprint" "ezee-footprints:Potentiometer_Wheel_3pin_Pitch4mm"
+		(property "Footprint" "kicad-ezee-footprints:Potentiometer_Wheel_3pin_Pitch4mm"
 			(at 52.07 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -17443,7 +17443,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "ezee-footprints:TestPoint_Pad_D1.0mm"
+		(property "Footprint" "kicad-ezee-footprints:TestPoint_Pad_D1.0mm"
 			(at 77.47 25.4 0)
 			(hide yes)
 			(show_name no)

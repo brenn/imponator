@@ -65,32 +65,7 @@
           "width": 0.3
         }
       ],
-      "drc_exclusions": [
-        [
-          "silk_edge_clearance|142119585|124714000|a850ba14-d3a1-4ab8-a172-194506cac244|7d0eb604-ddef-4f79-af21-86530ecb93ed",
-          ""
-        ],
-        [
-          "silk_edge_clearance|156211000|124714000|a850ba14-d3a1-4ab8-a172-194506cac244|e2242cfe-4eaa-473d-9cfd-c6f1baec47c1",
-          ""
-        ],
-        [
-          "silk_edge_clearance|199644000|88314000|6adb151c-b3ee-4336-bb1d-2c77863d45ee|4d7752bc-deb4-47df-b8d1-dafadec73f08",
-          ""
-        ],
-        [
-          "silk_edge_clearance|199644000|90854000|6adb151c-b3ee-4336-bb1d-2c77863d45ee|feda9d7a-5ef3-4f52-b6d5-127abde3f9d1",
-          ""
-        ],
-        [
-          "silk_edge_clearance|199644000|93394000|6adb151c-b3ee-4336-bb1d-2c77863d45ee|d655e023-70ca-43f6-896b-141f29774025",
-          ""
-        ],
-        [
-          "silk_edge_clearance|199644000|95934000|6adb151c-b3ee-4336-bb1d-2c77863d45ee|191665a2-a9bc-4915-97e3-3dfc0a67344a",
-          ""
-        ]
-      ],
+      "drc_exclusions": [],
       "meta": {
         "version": 2
       },
@@ -225,6 +200,7 @@
       ],
       "track_widths": [
         0.0,
+        0.152,
         0.2,
         0.25,
         0.3,
@@ -266,6 +242,10 @@
         {
           "diameter": 0.6,
           "drill": 0.3
+        },
+        {
+          "diameter": 0.8,
+          "drill": 0.4
         }
       ],
       "zones_allow_external_fillets": false
