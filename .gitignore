@@ -2,6 +2,7 @@
 
 /main-board/.history
 /led-board/.history
+/biasing/.history
 
 # Temporary files
 *.000
