@@ -3,6 +3,8 @@ Retro imponator NTH 1992 - reimplementation
 
 # Revisjon log
 
+Leaving this branch with second smd version using npns
+
 1.2 Migrated to SMD
 
 1.1 Swapped footprint for 2N7000 fets 
