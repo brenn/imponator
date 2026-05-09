@@ -1,7 +1,7 @@
 (kicad_pcb
-	(version 20241229)
+	(version 20260206)
 	(generator "pcbnew")
-	(generator_version "9.0")
+	(generator_version "10.0")
 	(general
 		(thickness 1.6)
 		(legacy_teardrops no)
@@ -72,7 +72,20 @@
 		(pad_to_mask_clearance 0.1)
 		(solder_mask_min_width 0.1)
 		(allow_soldermask_bridges_in_footprints no)
-		(tenting front back)
+		(tenting
+			(front yes)
+			(back yes)
+		)
+		(covering
+			(front no)
+			(back no)
+		)
+		(plugging
+			(front no)
+			(back no)
+		)
+		(capping no)
+		(filling no)
 		(grid_origin 48.895 20.955)
 		(pcbplotparams
 			(layerselection 0x00000000_00000000_55555555_5755f5ff)
@@ -82,15 +95,12 @@
 			(usegerberattributes yes)
 			(usegerberadvancedattributes yes)
 			(creategerberjobfile yes)
-			(dashed_line_dash_ratio 12.000000)
-			(dashed_line_gap_ratio 3.000000)
+			(dashed_line_dash_ratio 12)
+			(dashed_line_gap_ratio 3)
 			(svgprecision 4)
 			(plotframeref no)
 			(mode 1)
 			(useauxorigin no)
-			(hpglpennumber 1)
-			(hpglpenspeed 20)
-			(hpglpendiameter 15.000000)
 			(pdf_front_fp_property_popups yes)
 			(pdf_back_fp_property_popups yes)
 			(pdf_metadata yes)
@@ -114,24 +124,6 @@
 			(outputdirectory "")
 		)
 	)
-	(net 0 "")
-	(net 1 "/Led1")
-	(net 2 "/Row1")
-	(net 3 "/Led2")
-	(net 4 "/Led3")
-	(net 5 "/Led4")
-	(net 6 "/Led5")
-	(net 7 "/Led6")
-	(net 8 "/Led7")
-	(net 9 "/Row2")
-	(net 10 "/Row3")
-	(net 11 "/Row4")
-	(net 12 "/Row5")
-	(net 13 "/Row6")
-	(net 14 "/Row7")
-	(net 15 "/Row8")
-	(net 16 "GND")
-	(net 17 "/Led8")
 	(footprint "LED_THT:LED_D3.0mm"
 		(layer "F.Cu")
 		(uuid "00357e50-877b-4287-8139-14a54b559bcc")
@@ -160,7 +152,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -201,7 +193,14 @@
 		(path "/62e8f192-dc93-4bd1-be57-c7663ccf7955")
 		(sheetname "/")
 		(sheetfile "led-board.kicad_sch")
-		(attr through_hole exclude_from_pos_files)
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
+		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -0.29 -1.236)
 			(end -0.29 -1.08)
@@ -326,8 +325,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 10 "/Row3")
-			(pinfunction "K")
+			(net "/Row3")
+			(pinfunction "K_1")
 			(pintype "passive")
 			(uuid "a5a1853e-3ef1-41ba-9b33-1577e7128f1f")
 		)
@@ -337,8 +336,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 4 "/Led3")
-			(pinfunction "A")
+			(net "/Led3")
+			(pinfunction "A_2")
 			(pintype "passive")
 			(uuid "09d98a9b-0149-435a-91d2-8985d09785b8")
 		)
@@ -384,7 +383,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -414,7 +413,14 @@
 		(path "/e2cb7beb-401d-4ea8-9197-fad0aec2a105")
 		(sheetname "/")
 		(sheetfile "led-board.kicad_sch")
-		(attr exclude_from_pos_files exclude_from_bom)
+		(units
+			(unit
+				(name "A")
+				(pins "1")
+			)
+		)
+		(attr exclude_from_bom)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_circle
 			(center 0 0)
 			(end 0 0.7)
@@ -452,8 +458,8 @@
 			(at 0 0)
 			(size 1 1)
 			(layers "F.Cu" "F.Mask")
-			(net 4 "/Led3")
-			(pinfunction "1")
+			(net "/Led3")
+			(pinfunction "1_1")
 			(pintype "passive")
 			(uuid "90439baf-05a7-44df-9e8b-10de0d6fcfc5")
 		)
@@ -487,7 +493,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -528,7 +534,14 @@
 		(path "/76d8d602-9343-42af-9a2a-214c1df6ee64")
 		(sheetname "/")
 		(sheetfile "led-board.kicad_sch")
-		(attr through_hole exclude_from_pos_files)
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
+		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -0.29 -1.236)
 			(end -0.29 -1.08)
@@ -653,8 +666,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 11 "/Row4")
-			(pinfunction "K")
+			(net "/Row4")
+			(pinfunction "K_1")
 			(pintype "passive")
 			(uuid "a633e544-cc2a-4dba-bcdc-8ec164b6b923")
 		)
@@ -664,8 +677,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 5 "/Led4")
-			(pinfunction "A")
+			(net "/Led4")
+			(pinfunction "A_2")
 			(pintype "passive")
 			(uuid "b297cd52-caf0-4c45-8b03-eb12e2332c63")
 		)
@@ -710,7 +723,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -751,7 +764,14 @@
 		(path "/8dcd76c3-d08c-4549-9208-d54b32904104")
 		(sheetname "/")
 		(sheetfile "led-board.kicad_sch")
-		(attr through_hole exclude_from_pos_files)
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
+		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -0.29 -1.236)
 			(end -0.29 -1.08)
@@ -876,8 +896,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 12 "/Row5")
-			(pinfunction "K")
+			(net "/Row5")
+			(pinfunction "K_1")
 			(pintype "passive")
 			(uuid "7b7b72bf-d519-4745-9430-fef7eaeeae33")
 		)
@@ -887,8 +907,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 1 "/Led1")
-			(pinfunction "A")
+			(net "/Led1")
+			(pinfunction "A_2")
 			(pintype "passive")
 			(uuid "05040738-4361-4fa1-a1a4-1b56462a089e")
 		)
@@ -933,7 +953,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -974,7 +994,14 @@
 		(path "/f6a12712-2f30-44b1-985a-9c4dcd7dba1b")
 		(sheetname "/")
 		(sheetfile "led-board.kicad_sch")
-		(attr through_hole exclude_from_pos_files)
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
+		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -0.29 -1.236)
 			(end -0.29 -1.08)
@@ -1099,8 +1126,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 2 "/Row1")
-			(pinfunction "K")
+			(net "/Row1")
+			(pinfunction "K_1")
 			(pintype "passive")
 			(uuid "ca573068-1e16-4e6c-8b97-fb2972734f98")
 		)
@@ -1110,8 +1137,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 7 "/Led6")
-			(pinfunction "A")
+			(net "/Led6")
+			(pinfunction "A_2")
 			(pintype "passive")
 			(uuid "6dd7e2fc-f8cd-4cb4-9f95-7e8b5e753513")
 		)
@@ -1156,7 +1183,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -1197,7 +1224,14 @@
 		(path "/2da8cb91-4a5a-4c48-bda6-b89f8a8cb40b")
 		(sheetname "/")
 		(sheetfile "led-board.kicad_sch")
-		(attr through_hole exclude_from_pos_files)
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
+		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -0.29 -1.236)
 			(end -0.29 -1.08)
@@ -1322,8 +1356,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 15 "/Row8")
-			(pinfunction "K")
+			(net "/Row8")
+			(pinfunction "K_1")
 			(pintype "passive")
 			(uuid "30e503d7-5a1d-4f51-b725-c603ab3da774")
 		)
@@ -1333,8 +1367,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 5 "/Led4")
-			(pinfunction "A")
+			(net "/Led4")
+			(pinfunction "A_2")
 			(pintype "passive")
 			(uuid "b28a17e4-fce5-4ab1-bbc3-fcb1281b0cea")
 		)
@@ -1380,7 +1414,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -1410,7 +1444,14 @@
 		(path "/b0b5d5d7-ea28-4671-a99d-6ad112fd893e")
 		(sheetname "/")
 		(sheetfile "led-board.kicad_sch")
-		(attr exclude_from_pos_files exclude_from_bom)
+		(units
+			(unit
+				(name "A")
+				(pins "1")
+			)
+		)
+		(attr exclude_from_bom)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_circle
 			(center 0 0)
 			(end 0 0.7)
@@ -1448,8 +1489,8 @@
 			(at 0 0)
 			(size 1 1)
 			(layers "F.Cu" "F.Mask")
-			(net 2 "/Row1")
-			(pinfunction "1")
+			(net "/Row1")
+			(pinfunction "1_1")
 			(pintype "passive")
 			(uuid "3fa900b6-f646-444b-b189-8d54277e0e6d")
 		)
@@ -1483,7 +1524,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -1524,7 +1565,14 @@
 		(path "/ea0ef45c-cabe-4b3c-98a3-75311f574819")
 		(sheetname "/")
 		(sheetfile "led-board.kicad_sch")
-		(attr through_hole exclude_from_pos_files)
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
+		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -0.29 -1.236)
 			(end -0.29 -1.08)
@@ -1649,8 +1697,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 12 "/Row5")
-			(pinfunction "K")
+			(net "/Row5")
+			(pinfunction "K_1")
 			(pintype "passive")
 			(uuid "afbc85cf-3385-4f85-8831-377b462e3075")
 		)
@@ -1660,8 +1708,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 17 "/Led8")
-			(pinfunction "A")
+			(net "/Led8")
+			(pinfunction "A_2")
 			(pintype "passive")
 			(uuid "077069aa-ec48-47d2-a148-c7bc63780c89")
 		)
@@ -1707,7 +1755,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -1737,7 +1785,14 @@
 		(path "/384ab311-2dbd-4f65-a5fe-75a7fd66838e")
 		(sheetname "/")
 		(sheetfile "led-board.kicad_sch")
-		(attr exclude_from_pos_files exclude_from_bom)
+		(units
+			(unit
+				(name "A")
+				(pins "1")
+			)
+		)
+		(attr exclude_from_bom)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_circle
 			(center 0 0)
 			(end 0 0.7)
@@ -1775,8 +1830,8 @@
 			(at 0 0)
 			(size 1 1)
 			(layers "F.Cu" "F.Mask")
-			(net 6 "/Led5")
-			(pinfunction "1")
+			(net "/Led5")
+			(pinfunction "1_1")
 			(pintype "passive")
 			(uuid "140e414e-c9fc-4581-b198-ab125aef95ef")
 		)
@@ -1810,7 +1865,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -1851,7 +1906,14 @@
 		(path "/0975c52f-3b60-427e-9e6c-2259c9fb555e")
 		(sheetname "/")
 		(sheetfile "led-board.kicad_sch")
-		(attr through_hole exclude_from_pos_files)
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
+		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -0.29 -1.236)
 			(end -0.29 -1.08)
@@ -1976,8 +2038,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 10 "/Row3")
-			(pinfunction "K")
+			(net "/Row3")
+			(pinfunction "K_1")
 			(pintype "passive")
 			(uuid "291c8f86-833e-4e3d-940a-b24cb8b1596b")
 		)
@@ -1987,8 +2049,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 1 "/Led1")
-			(pinfunction "A")
+			(net "/Led1")
+			(pinfunction "A_2")
 			(pintype "passive")
 			(uuid "56cb7d43-01bc-47e6-adcb-e36912f3ebec")
 		)
@@ -2033,7 +2095,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -2074,7 +2136,14 @@
 		(path "/4c760fb7-e33e-4b14-87a8-6e3b3ae08cd8")
 		(sheetname "/")
 		(sheetfile "led-board.kicad_sch")
-		(attr through_hole exclude_from_pos_files)
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
+		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -0.29 -1.236)
 			(end -0.29 -1.08)
@@ -2199,8 +2268,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 15 "/Row8")
-			(pinfunction "K")
+			(net "/Row8")
+			(pinfunction "K_1")
 			(pintype "passive")
 			(uuid "3fd5d31d-816a-4c42-bbb0-4b5d6247e028")
 		)
@@ -2210,8 +2279,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 4 "/Led3")
-			(pinfunction "A")
+			(net "/Led3")
+			(pinfunction "A_2")
 			(pintype "passive")
 			(uuid "9045cfa8-05f6-47e4-8fe7-38310a314562")
 		)
@@ -2257,7 +2326,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -2287,7 +2356,14 @@
 		(path "/d83548d9-9493-47ac-856c-5f6d807b9f73")
 		(sheetname "/")
 		(sheetfile "led-board.kicad_sch")
-		(attr exclude_from_pos_files exclude_from_bom)
+		(units
+			(unit
+				(name "A")
+				(pins "1")
+			)
+		)
+		(attr exclude_from_bom)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_circle
 			(center 0 0)
 			(end 0 0.7)
@@ -2325,8 +2401,8 @@
 			(at 0 0)
 			(size 1 1)
 			(layers "F.Cu" "F.Mask")
-			(net 17 "/Led8")
-			(pinfunction "1")
+			(net "/Led8")
+			(pinfunction "1_1")
 			(pintype "passive")
 			(uuid "3f0bdf4e-172a-4a0e-a000-9a871fd633a4")
 		)
@@ -2360,7 +2436,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -2401,7 +2477,14 @@
 		(path "/40833d1d-ad62-43e2-a6b1-7e2ea0f866a4")
 		(sheetname "/")
 		(sheetfile "led-board.kicad_sch")
-		(attr through_hole exclude_from_pos_files)
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
+		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -0.29 -1.236)
 			(end -0.29 -1.08)
@@ -2526,8 +2609,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 13 "/Row6")
-			(pinfunction "K")
+			(net "/Row6")
+			(pinfunction "K_1")
 			(pintype "passive")
 			(uuid "4620a79d-9ce3-4560-80e7-0cecb8849826")
 		)
@@ -2537,8 +2620,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 4 "/Led3")
-			(pinfunction "A")
+			(net "/Led3")
+			(pinfunction "A_2")
 			(pintype "passive")
 			(uuid "71fbb0eb-22cd-4f68-96c7-aee9047a9b96")
 		)
@@ -2585,7 +2668,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -2613,7 +2696,14 @@
 		(path "/38088383-60a9-4301-abef-e92db7b7d8e9")
 		(sheetname "/")
 		(sheetfile "led-board.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins)
+			)
+		)
 		(attr smd exclude_from_bom dnp)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_circle
 			(center 0 0)
 			(end 1.25 0)
@@ -2685,7 +2775,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -2726,7 +2816,14 @@
 		(path "/c2e507f9-8516-4668-80f4-8dddcfd7be0b")
 		(sheetname "/")
 		(sheetfile "led-board.kicad_sch")
-		(attr through_hole exclude_from_pos_files)
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
+		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -0.29 -1.236)
 			(end -0.29 -1.08)
@@ -2851,8 +2948,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 15 "/Row8")
-			(pinfunction "K")
+			(net "/Row8")
+			(pinfunction "K_1")
 			(pintype "passive")
 			(uuid "755afcc4-9fc6-4eaa-af00-25041abe7c8f")
 		)
@@ -2862,8 +2959,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 1 "/Led1")
-			(pinfunction "A")
+			(net "/Led1")
+			(pinfunction "A_2")
 			(pintype "passive")
 			(uuid "37ad8dac-5304-4fab-8bca-ff6cc564a249")
 		)
@@ -2908,7 +3005,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -2949,7 +3046,14 @@
 		(path "/7d2005fa-47b8-420e-a76d-f11b183070d7")
 		(sheetname "/")
 		(sheetfile "led-board.kicad_sch")
-		(attr through_hole exclude_from_pos_files)
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
+		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -0.29 -1.236)
 			(end -0.29 -1.08)
@@ -3074,8 +3178,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 11 "/Row4")
-			(pinfunction "K")
+			(net "/Row4")
+			(pinfunction "K_1")
 			(pintype "passive")
 			(uuid "489525a6-a242-4c2c-a678-2e5aaf0af475")
 		)
@@ -3085,8 +3189,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 17 "/Led8")
-			(pinfunction "A")
+			(net "/Led8")
+			(pinfunction "A_2")
 			(pintype "passive")
 			(uuid "a5b8e032-db0c-4fd7-a4b5-4090cdc881f3")
 		)
@@ -3131,7 +3235,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -3172,7 +3276,14 @@
 		(path "/6541d174-059a-490d-9cc4-11c4c3add441")
 		(sheetname "/")
 		(sheetfile "led-board.kicad_sch")
-		(attr through_hole exclude_from_pos_files)
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
+		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -0.29 -1.236)
 			(end -0.29 -1.08)
@@ -3297,8 +3408,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 11 "/Row4")
-			(pinfunction "K")
+			(net "/Row4")
+			(pinfunction "K_1")
 			(pintype "passive")
 			(uuid "033c8e56-1420-42b5-b81f-7cb5f8dacf55")
 		)
@@ -3308,8 +3419,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 4 "/Led3")
-			(pinfunction "A")
+			(net "/Led3")
+			(pinfunction "A_2")
 			(pintype "passive")
 			(uuid "c1500aad-382a-4524-9a1c-98f4ec74d1ab")
 		)
@@ -3356,7 +3467,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -3384,7 +3495,14 @@
 		(path "/503b440d-9deb-4225-92f4-4d1ddcabfe91")
 		(sheetname "/")
 		(sheetfile "led-board.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins)
+			)
+		)
 		(attr smd exclude_from_bom dnp)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_circle
 			(center 0 0)
 			(end 1.25 0)
@@ -3456,7 +3574,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -3497,7 +3615,14 @@
 		(path "/0ea3a873-435d-477b-85ce-ce638f86ff53")
 		(sheetname "/")
 		(sheetfile "led-board.kicad_sch")
-		(attr through_hole exclude_from_pos_files)
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
+		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -0.29 -1.236)
 			(end -0.29 -1.08)
@@ -3622,8 +3747,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 14 "/Row7")
-			(pinfunction "K")
+			(net "/Row7")
+			(pinfunction "K_1")
 			(pintype "passive")
 			(uuid "538f5a27-1264-41e7-8c35-62d1a0baabdd")
 		)
@@ -3633,8 +3758,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 5 "/Led4")
-			(pinfunction "A")
+			(net "/Led4")
+			(pinfunction "A_2")
 			(pintype "passive")
 			(uuid "4b55acdb-aec2-4954-b859-2bbd09b20ef3")
 		)
@@ -3679,7 +3804,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -3720,7 +3845,14 @@
 		(path "/0da3011c-fd56-43ec-87eb-b01afc2949f1")
 		(sheetname "/")
 		(sheetfile "led-board.kicad_sch")
-		(attr through_hole exclude_from_pos_files)
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
+		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -0.29 -1.236)
 			(end -0.29 -1.08)
@@ -3845,8 +3977,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 13 "/Row6")
-			(pinfunction "K")
+			(net "/Row6")
+			(pinfunction "K_1")
 			(pintype "passive")
 			(uuid "96c9defd-5d1a-4630-89be-caa1f42c830e")
 		)
@@ -3856,8 +3988,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 7 "/Led6")
-			(pinfunction "A")
+			(net "/Led6")
+			(pinfunction "A_2")
 			(pintype "passive")
 			(uuid "08c0a224-4c8f-44ca-b297-45fdbfb33ef9")
 		)
@@ -3903,7 +4035,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -3933,7 +4065,14 @@
 		(path "/1bff39da-93c5-4cb0-9236-4fa406da0f4a")
 		(sheetname "/")
 		(sheetfile "led-board.kicad_sch")
-		(attr exclude_from_pos_files exclude_from_bom)
+		(units
+			(unit
+				(name "A")
+				(pins "1")
+			)
+		)
+		(attr exclude_from_bom)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_circle
 			(center 0 0)
 			(end 0 0.7)
@@ -3971,8 +4110,8 @@
 			(at 0 0)
 			(size 1 1)
 			(layers "F.Cu" "F.Mask")
-			(net 3 "/Led2")
-			(pinfunction "1")
+			(net "/Led2")
+			(pinfunction "1_1")
 			(pintype "passive")
 			(uuid "475c56f9-ca98-49ee-a046-6fdb7d498446")
 		)
@@ -4006,7 +4145,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -4047,7 +4186,14 @@
 		(path "/031bd7b0-7410-4e68-9b4e-15352d908014")
 		(sheetname "/")
 		(sheetfile "led-board.kicad_sch")
-		(attr through_hole exclude_from_pos_files)
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
+		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -0.29 -1.236)
 			(end -0.29 -1.08)
@@ -4172,8 +4318,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 9 "/Row2")
-			(pinfunction "K")
+			(net "/Row2")
+			(pinfunction "K_1")
 			(pintype "passive")
 			(uuid "3aee0d5d-e8c7-43ea-b3bc-727f8da5276a")
 		)
@@ -4183,8 +4329,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 17 "/Led8")
-			(pinfunction "A")
+			(net "/Led8")
+			(pinfunction "A_2")
 			(pintype "passive")
 			(uuid "ad1e5b9d-c23f-4949-bc98-54731072528c")
 		)
@@ -4229,7 +4375,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -4270,7 +4416,14 @@
 		(path "/a396efc9-2f73-4b14-8ad8-06d731c06098")
 		(sheetname "/")
 		(sheetfile "led-board.kicad_sch")
-		(attr through_hole exclude_from_pos_files)
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
+		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -0.29 -1.236)
 			(end -0.29 -1.08)
@@ -4395,8 +4548,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 2 "/Row1")
-			(pinfunction "K")
+			(net "/Row1")
+			(pinfunction "K_1")
 			(pintype "passive")
 			(uuid "e7ff7da7-1ecc-4abd-b039-debe4f8b5d85")
 		)
@@ -4406,8 +4559,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 1 "/Led1")
-			(pinfunction "A")
+			(net "/Led1")
+			(pinfunction "A_2")
 			(pintype "passive")
 			(uuid "2d0e5f34-2cd1-4e20-adba-eec246ba5179")
 		)
@@ -4452,7 +4605,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -4493,7 +4646,14 @@
 		(path "/dc21c7a9-7429-46e8-ac3e-b24e1a26c713")
 		(sheetname "/")
 		(sheetfile "led-board.kicad_sch")
-		(attr through_hole exclude_from_pos_files)
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
+		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -0.29 -1.236)
 			(end -0.29 -1.08)
@@ -4618,8 +4778,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 10 "/Row3")
-			(pinfunction "K")
+			(net "/Row3")
+			(pinfunction "K_1")
 			(pintype "passive")
 			(uuid "a65c71fd-5836-422b-971f-90f224d93c31")
 		)
@@ -4629,8 +4789,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 17 "/Led8")
-			(pinfunction "A")
+			(net "/Led8")
+			(pinfunction "A_2")
 			(pintype "passive")
 			(uuid "b03a5231-758e-4c3b-8c33-7901a70e93d2")
 		)
@@ -4675,7 +4835,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -4716,7 +4876,14 @@
 		(path "/f2bd18f6-242b-469d-a8d4-d7cdf2dbd99a")
 		(sheetname "/")
 		(sheetfile "led-board.kicad_sch")
-		(attr through_hole exclude_from_pos_files)
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
+		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -0.29 -1.236)
 			(end -0.29 -1.08)
@@ -4841,8 +5008,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 11 "/Row4")
-			(pinfunction "K")
+			(net "/Row4")
+			(pinfunction "K_1")
 			(pintype "passive")
 			(uuid "22a05bf6-ba00-4ef0-9753-bf599c3308c7")
 		)
@@ -4852,8 +5019,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 3 "/Led2")
-			(pinfunction "A")
+			(net "/Led2")
+			(pinfunction "A_2")
 			(pintype "passive")
 			(uuid "de68d7bd-719a-4ec1-b6a5-ffe9ef418ce2")
 		)
@@ -4900,7 +5067,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -4928,7 +5095,14 @@
 		(path "/c60a47ae-705d-447b-97d9-f01dc1b875e1")
 		(sheetname "/")
 		(sheetfile "led-board.kicad_sch")
-		(attr exclude_from_pos_files exclude_from_bom dnp)
+		(units
+			(unit
+				(name "A")
+				(pins "1")
+			)
+		)
+		(attr exclude_from_bom dnp)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_circle
 			(center 0 0)
 			(end 1.9 0)
@@ -4968,8 +5142,8 @@
 			(drill 2.2)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 16 "GND")
-			(pinfunction "1")
+			(net "GND")
+			(pinfunction "1_1")
 			(pintype "input")
 			(zone_connect 2)
 			(uuid "e4b13ed6-25b0-4d09-b760-5875825a379e")
@@ -5004,7 +5178,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -5045,7 +5219,14 @@
 		(path "/92436452-fab4-49b5-a6ec-e8f1f1041c67")
 		(sheetname "/")
 		(sheetfile "led-board.kicad_sch")
-		(attr through_hole exclude_from_pos_files)
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
+		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -0.29 -1.236)
 			(end -0.29 -1.08)
@@ -5170,8 +5351,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 9 "/Row2")
-			(pinfunction "K")
+			(net "/Row2")
+			(pinfunction "K_1")
 			(pintype "passive")
 			(uuid "7a9abbe4-de02-4970-b46b-e91a94988a27")
 		)
@@ -5181,8 +5362,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 6 "/Led5")
-			(pinfunction "A")
+			(net "/Led5")
+			(pinfunction "A_2")
 			(pintype "passive")
 			(uuid "e4d4723d-fd0a-4654-a489-4156ea191f01")
 		)
@@ -5227,7 +5408,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -5268,7 +5449,14 @@
 		(path "/cd6e2df5-46eb-444c-83a2-8639426af83a")
 		(sheetname "/")
 		(sheetfile "led-board.kicad_sch")
-		(attr through_hole exclude_from_pos_files)
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
+		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -0.29 -1.236)
 			(end -0.29 -1.08)
@@ -5393,8 +5581,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 13 "/Row6")
-			(pinfunction "K")
+			(net "/Row6")
+			(pinfunction "K_1")
 			(pintype "passive")
 			(uuid "488270b4-8cf5-408a-bc14-f1158c3111e0")
 		)
@@ -5404,8 +5592,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 5 "/Led4")
-			(pinfunction "A")
+			(net "/Led4")
+			(pinfunction "A_2")
 			(pintype "passive")
 			(uuid "aa7614a6-593e-4ed7-81c8-de2f20464a9a")
 		)
@@ -5450,7 +5638,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -5491,7 +5679,14 @@
 		(path "/e1b5f89f-44eb-46ee-8bb5-67bdae1f0d06")
 		(sheetname "/")
 		(sheetfile "led-board.kicad_sch")
-		(attr through_hole exclude_from_pos_files)
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
+		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -0.29 -1.236)
 			(end -0.29 -1.08)
@@ -5616,8 +5811,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 14 "/Row7")
-			(pinfunction "K")
+			(net "/Row7")
+			(pinfunction "K_1")
 			(pintype "passive")
 			(uuid "f4af3128-477e-4d81-a88c-97a891edfe81")
 		)
@@ -5627,8 +5822,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 1 "/Led1")
-			(pinfunction "A")
+			(net "/Led1")
+			(pinfunction "A_2")
 			(pintype "passive")
 			(uuid "d3559412-84e4-44f8-98f6-b361bc9a968a")
 		)
@@ -5673,7 +5868,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -5714,7 +5909,14 @@
 		(path "/8450baf4-ae29-4629-84ea-dd28d7f33516")
 		(sheetname "/")
 		(sheetfile "led-board.kicad_sch")
-		(attr through_hole exclude_from_pos_files)
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
+		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -0.29 -1.236)
 			(end -0.29 -1.08)
@@ -5839,8 +6041,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 2 "/Row1")
-			(pinfunction "K")
+			(net "/Row1")
+			(pinfunction "K_1")
 			(pintype "passive")
 			(uuid "61dddc2a-4b1d-4d24-885f-56ed86e47f33")
 		)
@@ -5850,8 +6052,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 5 "/Led4")
-			(pinfunction "A")
+			(net "/Led4")
+			(pinfunction "A_2")
 			(pintype "passive")
 			(uuid "b08c14ed-12e0-4406-9356-89c6212da48d")
 		)
@@ -5898,7 +6100,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -5926,7 +6128,14 @@
 		(path "/8166e445-02f4-40fc-b8cc-c488784e40c1")
 		(sheetname "/")
 		(sheetfile "led-board.kicad_sch")
-		(attr exclude_from_pos_files exclude_from_bom dnp)
+		(units
+			(unit
+				(name "A")
+				(pins "1")
+			)
+		)
+		(attr exclude_from_bom dnp)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_circle
 			(center 0 0)
 			(end 1.9 0)
@@ -5966,8 +6175,8 @@
 			(drill 2.2)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 16 "GND")
-			(pinfunction "1")
+			(net "GND")
+			(pinfunction "1_1")
 			(pintype "input")
 			(zone_connect 2)
 			(uuid "9f92e754-2fa5-49fb-b849-33871751ba66")
@@ -6002,7 +6211,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -6043,7 +6252,14 @@
 		(path "/d067771f-d2f7-4fac-89f3-fbb18ab8f639")
 		(sheetname "/")
 		(sheetfile "led-board.kicad_sch")
-		(attr through_hole exclude_from_pos_files)
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
+		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -0.29 -1.236)
 			(end -0.29 -1.08)
@@ -6168,8 +6384,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 12 "/Row5")
-			(pinfunction "K")
+			(net "/Row5")
+			(pinfunction "K_1")
 			(pintype "passive")
 			(uuid "bbc2d0de-4708-46c6-86b1-2536ba11ead1")
 		)
@@ -6179,8 +6395,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 4 "/Led3")
-			(pinfunction "A")
+			(net "/Led3")
+			(pinfunction "A_2")
 			(pintype "passive")
 			(uuid "9d9c5501-24b8-4b53-a8cc-932032550c78")
 		)
@@ -6225,7 +6441,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -6266,7 +6482,14 @@
 		(path "/30a5e5f2-08b7-4cc2-b522-ba57997d321d")
 		(sheetname "/")
 		(sheetfile "led-board.kicad_sch")
-		(attr through_hole exclude_from_pos_files)
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
+		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -0.29 -1.236)
 			(end -0.29 -1.08)
@@ -6391,8 +6614,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 13 "/Row6")
-			(pinfunction "K")
+			(net "/Row6")
+			(pinfunction "K_1")
 			(pintype "passive")
 			(uuid "af9fb5ce-bd40-4ec2-baeb-f62a800ded41")
 		)
@@ -6402,8 +6625,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 8 "/Led7")
-			(pinfunction "A")
+			(net "/Led7")
+			(pinfunction "A_2")
 			(pintype "passive")
 			(uuid "42dab492-1d17-4ee2-a35a-f1193fc53689")
 		)
@@ -6448,7 +6671,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -6489,7 +6712,14 @@
 		(path "/88f94fab-c15c-4f8d-88d2-7f6345cd12cf")
 		(sheetname "/")
 		(sheetfile "led-board.kicad_sch")
-		(attr through_hole exclude_from_pos_files)
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
+		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -0.29 -1.236)
 			(end -0.29 -1.08)
@@ -6614,8 +6844,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 9 "/Row2")
-			(pinfunction "K")
+			(net "/Row2")
+			(pinfunction "K_1")
 			(pintype "passive")
 			(uuid "30d93ec4-f31e-4d1a-bc06-ee7bf3ddaf84")
 		)
@@ -6625,8 +6855,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 5 "/Led4")
-			(pinfunction "A")
+			(net "/Led4")
+			(pinfunction "A_2")
 			(pintype "passive")
 			(uuid "dce632ed-9782-455f-b1f4-b2626cb2c4ae")
 		)
@@ -6671,7 +6901,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -6712,7 +6942,14 @@
 		(path "/5e037881-51d0-4c5d-bf91-631bdee40dce")
 		(sheetname "/")
 		(sheetfile "led-board.kicad_sch")
-		(attr through_hole exclude_from_pos_files)
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
+		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -0.29 -1.236)
 			(end -0.29 -1.08)
@@ -6837,8 +7074,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 9 "/Row2")
-			(pinfunction "K")
+			(net "/Row2")
+			(pinfunction "K_1")
 			(pintype "passive")
 			(uuid "b46578af-f821-4c03-9412-0ae3b229349b")
 		)
@@ -6848,8 +7085,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 4 "/Led3")
-			(pinfunction "A")
+			(net "/Led3")
+			(pinfunction "A_2")
 			(pintype "passive")
 			(uuid "db89c67a-a414-40d4-9a55-a965e237aa29")
 		)
@@ -6894,7 +7131,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -6935,7 +7172,14 @@
 		(path "/3945f3f5-5a2a-476d-8aac-f6c697aab182")
 		(sheetname "/")
 		(sheetfile "led-board.kicad_sch")
-		(attr through_hole exclude_from_pos_files)
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
+		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -0.29 -1.236)
 			(end -0.29 -1.08)
@@ -7060,8 +7304,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 10 "/Row3")
-			(pinfunction "K")
+			(net "/Row3")
+			(pinfunction "K_1")
 			(pintype "passive")
 			(uuid "607afd46-3a7c-407d-aaa8-a57f814117d9")
 		)
@@ -7071,8 +7315,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 5 "/Led4")
-			(pinfunction "A")
+			(net "/Led4")
+			(pinfunction "A_2")
 			(pintype "passive")
 			(uuid "19f4e5e3-3cb4-4bce-97d4-32101f8a50bd")
 		)
@@ -7117,7 +7361,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -7158,7 +7402,14 @@
 		(path "/1b0f4da3-b8cd-4f77-8d2f-fdc2398d2f10")
 		(sheetname "/")
 		(sheetfile "led-board.kicad_sch")
-		(attr through_hole exclude_from_pos_files)
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
+		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -0.29 -1.236)
 			(end -0.29 -1.08)
@@ -7283,8 +7534,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 9 "/Row2")
-			(pinfunction "K")
+			(net "/Row2")
+			(pinfunction "K_1")
 			(pintype "passive")
 			(uuid "44732cf6-3733-40ad-8c63-79549b4aefd3")
 		)
@@ -7294,8 +7545,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 3 "/Led2")
-			(pinfunction "A")
+			(net "/Led2")
+			(pinfunction "A_2")
 			(pintype "passive")
 			(uuid "f5b406f3-53ba-4294-87df-ad315fb6b809")
 		)
@@ -7340,7 +7591,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -7381,7 +7632,14 @@
 		(path "/b3bd94ac-c922-4dd2-9f74-7f5e6a2ec6c4")
 		(sheetname "/")
 		(sheetfile "led-board.kicad_sch")
-		(attr through_hole exclude_from_pos_files)
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
+		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -0.29 -1.236)
 			(end -0.29 -1.08)
@@ -7506,8 +7764,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 14 "/Row7")
-			(pinfunction "K")
+			(net "/Row7")
+			(pinfunction "K_1")
 			(pintype "passive")
 			(uuid "befd484a-09c0-47e7-99fa-e8b53bca7965")
 		)
@@ -7517,8 +7775,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 6 "/Led5")
-			(pinfunction "A")
+			(net "/Led5")
+			(pinfunction "A_2")
 			(pintype "passive")
 			(uuid "e3c7b4d1-ac33-4264-b1ee-bc86ffae9623")
 		)
@@ -7563,7 +7821,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -7604,7 +7862,14 @@
 		(path "/c82537fa-e6ff-4952-9b66-00d4a1c20661")
 		(sheetname "/")
 		(sheetfile "led-board.kicad_sch")
-		(attr through_hole exclude_from_pos_files)
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
+		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -0.29 -1.236)
 			(end -0.29 -1.08)
@@ -7729,8 +7994,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 9 "/Row2")
-			(pinfunction "K")
+			(net "/Row2")
+			(pinfunction "K_1")
 			(pintype "passive")
 			(uuid "c49bf7ec-ed96-4589-b4da-2016b1f919ff")
 		)
@@ -7740,8 +8005,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 7 "/Led6")
-			(pinfunction "A")
+			(net "/Led6")
+			(pinfunction "A_2")
 			(pintype "passive")
 			(uuid "7fa88a15-cace-4712-a2c0-932a2db04ded")
 		)
@@ -7786,7 +8051,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -7827,7 +8092,14 @@
 		(path "/f1503133-f33a-4925-a10a-6547841a0165")
 		(sheetname "/")
 		(sheetfile "led-board.kicad_sch")
-		(attr through_hole exclude_from_pos_files)
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
+		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -0.29 -1.236)
 			(end -0.29 -1.08)
@@ -7952,8 +8224,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 14 "/Row7")
-			(pinfunction "K")
+			(net "/Row7")
+			(pinfunction "K_1")
 			(pintype "passive")
 			(uuid "445bda2c-fb43-4fd6-ba2f-7e8a3dbd3f3b")
 		)
@@ -7963,8 +8235,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 4 "/Led3")
-			(pinfunction "A")
+			(net "/Led3")
+			(pinfunction "A_2")
 			(pintype "passive")
 			(uuid "25723c52-6fe2-47a1-a90f-88c0793ccf5e")
 		)
@@ -8009,7 +8281,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -8050,7 +8322,14 @@
 		(path "/3acaabfc-7246-46c5-bd7e-e250b962b796")
 		(sheetname "/")
 		(sheetfile "led-board.kicad_sch")
-		(attr through_hole exclude_from_pos_files)
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
+		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -0.29 -1.236)
 			(end -0.29 -1.08)
@@ -8175,8 +8454,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 12 "/Row5")
-			(pinfunction "K")
+			(net "/Row5")
+			(pinfunction "K_1")
 			(pintype "passive")
 			(uuid "9b155752-f56e-4fd7-9974-08de00d17777")
 		)
@@ -8186,8 +8465,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 3 "/Led2")
-			(pinfunction "A")
+			(net "/Led2")
+			(pinfunction "A_2")
 			(pintype "passive")
 			(uuid "6fd7d3f3-5261-4aa1-9517-4c9b59db96a8")
 		)
@@ -8232,7 +8511,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -8273,7 +8552,14 @@
 		(path "/94801390-ae43-4306-974c-b6617bfeaf02")
 		(sheetname "/")
 		(sheetfile "led-board.kicad_sch")
-		(attr through_hole exclude_from_pos_files)
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
+		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -0.29 -1.236)
 			(end -0.29 -1.08)
@@ -8398,8 +8684,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 2 "/Row1")
-			(pinfunction "K")
+			(net "/Row1")
+			(pinfunction "K_1")
 			(pintype "passive")
 			(uuid "0f1edc60-d8cd-4d64-9702-5456a8d51ed8")
 		)
@@ -8409,8 +8695,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 17 "/Led8")
-			(pinfunction "A")
+			(net "/Led8")
+			(pinfunction "A_2")
 			(pintype "passive")
 			(uuid "9216f42b-a39e-445a-8829-15b6d5030c6c")
 		)
@@ -8455,7 +8741,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -8496,7 +8782,14 @@
 		(path "/5d626659-0487-46d1-bd54-33f399cfaea9")
 		(sheetname "/")
 		(sheetfile "led-board.kicad_sch")
-		(attr through_hole exclude_from_pos_files)
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
+		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -0.29 -1.236)
 			(end -0.29 -1.08)
@@ -8621,8 +8914,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 12 "/Row5")
-			(pinfunction "K")
+			(net "/Row5")
+			(pinfunction "K_1")
 			(pintype "passive")
 			(uuid "84832f48-9568-4712-84da-36a5e56e238c")
 		)
@@ -8632,8 +8925,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 5 "/Led4")
-			(pinfunction "A")
+			(net "/Led4")
+			(pinfunction "A_2")
 			(pintype "passive")
 			(uuid "56e982d0-2a0e-485a-9d2e-5f4b2d676261")
 		)
@@ -8678,7 +8971,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -8719,7 +9012,14 @@
 		(path "/d6d4bdbb-e599-4a6a-a6ff-6cd6cd1cdb55")
 		(sheetname "/")
 		(sheetfile "led-board.kicad_sch")
-		(attr through_hole exclude_from_pos_files)
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
+		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -0.29 -1.236)
 			(end -0.29 -1.08)
@@ -8844,8 +9144,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 12 "/Row5")
-			(pinfunction "K")
+			(net "/Row5")
+			(pinfunction "K_1")
 			(pintype "passive")
 			(uuid "980289b2-84b4-4d7a-a6c5-fe5bdd8fc593")
 		)
@@ -8855,8 +9155,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 8 "/Led7")
-			(pinfunction "A")
+			(net "/Led7")
+			(pinfunction "A_2")
 			(pintype "passive")
 			(uuid "3a17b89d-6243-4418-9baf-ca9e2448833e")
 		)
@@ -8901,7 +9201,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -8942,7 +9242,14 @@
 		(path "/692c2498-4284-4c74-8b1b-2d09809a638c")
 		(sheetname "/")
 		(sheetfile "led-board.kicad_sch")
-		(attr through_hole exclude_from_pos_files)
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
+		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -0.29 -1.236)
 			(end -0.29 -1.08)
@@ -9067,8 +9374,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 2 "/Row1")
-			(pinfunction "K")
+			(net "/Row1")
+			(pinfunction "K_1")
 			(pintype "passive")
 			(uuid "6e261bd3-613c-42ff-a200-09c3d8054314")
 		)
@@ -9078,8 +9385,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 8 "/Led7")
-			(pinfunction "A")
+			(net "/Led7")
+			(pinfunction "A_2")
 			(pintype "passive")
 			(uuid "0bf2ad64-dda1-48a4-9ac0-8d6399d963c6")
 		)
@@ -9125,7 +9432,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -9155,7 +9462,14 @@
 		(path "/e36ad33f-407f-45bb-b771-df39dab9e170")
 		(sheetname "/")
 		(sheetfile "led-board.kicad_sch")
-		(attr exclude_from_pos_files exclude_from_bom)
+		(units
+			(unit
+				(name "A")
+				(pins "1")
+			)
+		)
+		(attr exclude_from_bom)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_circle
 			(center 0 0)
 			(end 0 0.7)
@@ -9193,8 +9507,8 @@
 			(at 0 0)
 			(size 1 1)
 			(layers "F.Cu" "F.Mask")
-			(net 1 "/Led1")
-			(pinfunction "1")
+			(net "/Led1")
+			(pinfunction "1_1")
 			(pintype "passive")
 			(uuid "39df5da5-cca2-4ecb-b4b1-9e9228056059")
 		)
@@ -9228,7 +9542,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -9269,7 +9583,14 @@
 		(path "/5d834880-a544-40a0-925b-67e4ec0f5389")
 		(sheetname "/")
 		(sheetfile "led-board.kicad_sch")
-		(attr through_hole exclude_from_pos_files)
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
+		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -0.29 -1.236)
 			(end -0.29 -1.08)
@@ -9394,8 +9715,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 11 "/Row4")
-			(pinfunction "K")
+			(net "/Row4")
+			(pinfunction "K_1")
 			(pintype "passive")
 			(uuid "5eb82862-6912-4379-9ca5-5a3870dac5c7")
 		)
@@ -9405,8 +9726,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 6 "/Led5")
-			(pinfunction "A")
+			(net "/Led5")
+			(pinfunction "A_2")
 			(pintype "passive")
 			(uuid "3b66b4e2-86bd-4b35-819f-f047b331f434")
 		)
@@ -9451,7 +9772,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -9492,7 +9813,14 @@
 		(path "/f96f88e2-93f0-49c5-a11b-356a4e45a927")
 		(sheetname "/")
 		(sheetfile "led-board.kicad_sch")
-		(attr through_hole exclude_from_pos_files)
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
+		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -0.29 -1.236)
 			(end -0.29 -1.08)
@@ -9617,8 +9945,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 12 "/Row5")
-			(pinfunction "K")
+			(net "/Row5")
+			(pinfunction "K_1")
 			(pintype "passive")
 			(uuid "fcef5915-6e23-4ebd-96fe-2f056d25796b")
 		)
@@ -9628,8 +9956,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 6 "/Led5")
-			(pinfunction "A")
+			(net "/Led5")
+			(pinfunction "A_2")
 			(pintype "passive")
 			(uuid "3f42ca56-3b64-40cf-b00f-7f6639395df1")
 		)
@@ -9674,7 +10002,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -9715,7 +10043,14 @@
 		(path "/321b367f-d0b5-440a-be59-3e2698faf123")
 		(sheetname "/")
 		(sheetfile "led-board.kicad_sch")
-		(attr through_hole exclude_from_pos_files)
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
+		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -0.29 -1.236)
 			(end -0.29 -1.08)
@@ -9840,8 +10175,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 13 "/Row6")
-			(pinfunction "K")
+			(net "/Row6")
+			(pinfunction "K_1")
 			(pintype "passive")
 			(uuid "12c28cbe-5f42-4300-b8ca-a18795b41c2a")
 		)
@@ -9851,8 +10186,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 6 "/Led5")
-			(pinfunction "A")
+			(net "/Led5")
+			(pinfunction "A_2")
 			(pintype "passive")
 			(uuid "d6832616-9351-4177-bade-e31466a4f1a6")
 		)
@@ -9897,7 +10232,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -9938,7 +10273,14 @@
 		(path "/8dc7bed6-49a8-4e57-a891-23ffeed57f99")
 		(sheetname "/")
 		(sheetfile "led-board.kicad_sch")
-		(attr through_hole exclude_from_pos_files)
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
+		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -0.29 -1.236)
 			(end -0.29 -1.08)
@@ -10063,8 +10405,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 9 "/Row2")
-			(pinfunction "K")
+			(net "/Row2")
+			(pinfunction "K_1")
 			(pintype "passive")
 			(uuid "11326ace-8105-4581-bbda-d6f838902ebf")
 		)
@@ -10074,8 +10416,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 1 "/Led1")
-			(pinfunction "A")
+			(net "/Led1")
+			(pinfunction "A_2")
 			(pintype "passive")
 			(uuid "df41b9c8-7ffd-4fc4-ad5a-80771a1108af")
 		)
@@ -10120,7 +10462,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -10161,7 +10503,14 @@
 		(path "/f9b07382-cbb7-4423-972f-7f9daff0bbbf")
 		(sheetname "/")
 		(sheetfile "led-board.kicad_sch")
-		(attr through_hole exclude_from_pos_files)
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
+		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -0.29 -1.236)
 			(end -0.29 -1.08)
@@ -10286,8 +10635,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 15 "/Row8")
-			(pinfunction "K")
+			(net "/Row8")
+			(pinfunction "K_1")
 			(pintype "passive")
 			(uuid "7720be27-2a6e-4ce1-ae30-07e5bee28b39")
 		)
@@ -10297,8 +10646,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 8 "/Led7")
-			(pinfunction "A")
+			(net "/Led7")
+			(pinfunction "A_2")
 			(pintype "passive")
 			(uuid "5ab515c0-a4db-4046-bd1e-8d2ad8706329")
 		)
@@ -10343,7 +10692,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -10384,7 +10733,14 @@
 		(path "/16a1f62d-d4d9-463c-95ed-9777410e5426")
 		(sheetname "/")
 		(sheetfile "led-board.kicad_sch")
-		(attr through_hole exclude_from_pos_files)
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
+		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -0.29 -1.236)
 			(end -0.29 -1.08)
@@ -10509,8 +10865,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 11 "/Row4")
-			(pinfunction "K")
+			(net "/Row4")
+			(pinfunction "K_1")
 			(pintype "passive")
 			(uuid "2346fabb-878f-40c8-b5a7-642d27e6a470")
 		)
@@ -10520,8 +10876,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 1 "/Led1")
-			(pinfunction "A")
+			(net "/Led1")
+			(pinfunction "A_2")
 			(pintype "passive")
 			(uuid "42b12836-0745-488f-aa35-10eb96fac31f")
 		)
@@ -10566,7 +10922,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -10607,7 +10963,14 @@
 		(path "/528d419f-f0b8-41b3-a0e5-51204f5cb2a6")
 		(sheetname "/")
 		(sheetfile "led-board.kicad_sch")
-		(attr through_hole exclude_from_pos_files)
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
+		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -0.29 -1.236)
 			(end -0.29 -1.08)
@@ -10732,8 +11095,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 10 "/Row3")
-			(pinfunction "K")
+			(net "/Row3")
+			(pinfunction "K_1")
 			(pintype "passive")
 			(uuid "1968cd52-da1d-46e6-b4f6-fa8202cb7bab")
 		)
@@ -10743,8 +11106,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 6 "/Led5")
-			(pinfunction "A")
+			(net "/Led5")
+			(pinfunction "A_2")
 			(pintype "passive")
 			(uuid "6f095c83-230c-498c-9031-07726e6dff25")
 		)
@@ -10789,7 +11152,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -10830,7 +11193,14 @@
 		(path "/33e3e4ad-0a92-49cc-983b-9f7897f42147")
 		(sheetname "/")
 		(sheetfile "led-board.kicad_sch")
-		(attr through_hole exclude_from_pos_files)
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
+		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -0.29 -1.236)
 			(end -0.29 -1.08)
@@ -10955,8 +11325,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 2 "/Row1")
-			(pinfunction "K")
+			(net "/Row1")
+			(pinfunction "K_1")
 			(pintype "passive")
 			(uuid "36759594-4c34-424b-adda-6319c605b6b2")
 		)
@@ -10966,8 +11336,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 3 "/Led2")
-			(pinfunction "A")
+			(net "/Led2")
+			(pinfunction "A_2")
 			(pintype "passive")
 			(uuid "1fa37aa3-05c1-4fd2-a7db-8fc0551907e5")
 		)
@@ -11012,7 +11382,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -11053,7 +11423,14 @@
 		(path "/5abfc72b-7725-492a-a97b-9837ea4eca09")
 		(sheetname "/")
 		(sheetfile "led-board.kicad_sch")
-		(attr through_hole exclude_from_pos_files)
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
+		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -0.29 -1.236)
 			(end -0.29 -1.08)
@@ -11178,8 +11555,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 14 "/Row7")
-			(pinfunction "K")
+			(net "/Row7")
+			(pinfunction "K_1")
 			(pintype "passive")
 			(uuid "4b2d237c-fab7-49d6-9a0a-ee506fee7336")
 		)
@@ -11189,8 +11566,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 7 "/Led6")
-			(pinfunction "A")
+			(net "/Led6")
+			(pinfunction "A_2")
 			(pintype "passive")
 			(uuid "6ae99ff6-f324-44c1-9b76-42b3d2736c2d")
 		)
@@ -11235,7 +11612,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -11276,7 +11653,14 @@
 		(path "/2e5686b2-4ec7-45de-8710-27fbfaaf35b2")
 		(sheetname "/")
 		(sheetfile "led-board.kicad_sch")
-		(attr through_hole exclude_from_pos_files)
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
+		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -0.29 -1.236)
 			(end -0.29 -1.08)
@@ -11401,8 +11785,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 14 "/Row7")
-			(pinfunction "K")
+			(net "/Row7")
+			(pinfunction "K_1")
 			(pintype "passive")
 			(uuid "5e2b8723-6a72-4206-abe8-a5f6b155993a")
 		)
@@ -11412,8 +11796,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 8 "/Led7")
-			(pinfunction "A")
+			(net "/Led7")
+			(pinfunction "A_2")
 			(pintype "passive")
 			(uuid "7d2e8b3b-3d06-454a-97fb-f9ab6d2ebbe5")
 		)
@@ -11458,7 +11842,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -11499,7 +11883,14 @@
 		(path "/92e35617-42ad-469c-91de-51d837daa994")
 		(sheetname "/")
 		(sheetfile "led-board.kicad_sch")
-		(attr through_hole exclude_from_pos_files)
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
+		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -0.29 -1.236)
 			(end -0.29 -1.08)
@@ -11624,8 +12015,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 15 "/Row8")
-			(pinfunction "K")
+			(net "/Row8")
+			(pinfunction "K_1")
 			(pintype "passive")
 			(uuid "e5435a61-6d30-4a16-a3b8-d63bdd063fc2")
 		)
@@ -11635,8 +12026,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 6 "/Led5")
-			(pinfunction "A")
+			(net "/Led5")
+			(pinfunction "A_2")
 			(pintype "passive")
 			(uuid "92b37060-315f-4f19-8f42-7b4df79d6f58")
 		)
@@ -11681,7 +12072,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -11722,7 +12113,14 @@
 		(path "/7e299bd4-93bc-470e-8d9f-ec4947bcd45c")
 		(sheetname "/")
 		(sheetfile "led-board.kicad_sch")
-		(attr through_hole exclude_from_pos_files)
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
+		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -0.29 -1.236)
 			(end -0.29 -1.08)
@@ -11847,8 +12245,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 11 "/Row4")
-			(pinfunction "K")
+			(net "/Row4")
+			(pinfunction "K_1")
 			(pintype "passive")
 			(uuid "0408828a-d11a-47ee-bda7-38453cc5ff31")
 		)
@@ -11858,8 +12256,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 8 "/Led7")
-			(pinfunction "A")
+			(net "/Led7")
+			(pinfunction "A_2")
 			(pintype "passive")
 			(uuid "9720736b-67c4-4c1d-8cc6-efd040183310")
 		)
@@ -11904,7 +12302,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -11945,7 +12343,14 @@
 		(path "/7a7287e0-f01e-4ebd-bd62-8712e9bce5de")
 		(sheetname "/")
 		(sheetfile "led-board.kicad_sch")
-		(attr through_hole exclude_from_pos_files)
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
+		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -0.29 -1.236)
 			(end -0.29 -1.08)
@@ -12070,8 +12475,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 10 "/Row3")
-			(pinfunction "K")
+			(net "/Row3")
+			(pinfunction "K_1")
 			(pintype "passive")
 			(uuid "08ac8689-dc0c-4f2d-a247-8007986c45f6")
 		)
@@ -12081,8 +12486,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 3 "/Led2")
-			(pinfunction "A")
+			(net "/Led2")
+			(pinfunction "A_2")
 			(pintype "passive")
 			(uuid "7fe3f299-7117-4e6b-94bc-744a6f7a0dfc")
 		)
@@ -12127,7 +12532,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -12168,7 +12573,14 @@
 		(path "/682e15b9-29ac-4875-a35d-f713cfa18700")
 		(sheetname "/")
 		(sheetfile "led-board.kicad_sch")
-		(attr through_hole exclude_from_pos_files)
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
+		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -0.29 -1.236)
 			(end -0.29 -1.08)
@@ -12293,8 +12705,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 11 "/Row4")
-			(pinfunction "K")
+			(net "/Row4")
+			(pinfunction "K_1")
 			(pintype "passive")
 			(uuid "6e888428-a9b7-4ed9-ad8a-57c73df54731")
 		)
@@ -12304,8 +12716,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 7 "/Led6")
-			(pinfunction "A")
+			(net "/Led6")
+			(pinfunction "A_2")
 			(pintype "passive")
 			(uuid "452f6997-1e39-4793-ac1c-97a3521ca4c9")
 		)
@@ -12350,7 +12762,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -12391,7 +12803,14 @@
 		(path "/bfaf0252-afa3-4a74-a62b-ddc8271fdfae")
 		(sheetname "/")
 		(sheetfile "led-board.kicad_sch")
-		(attr through_hole exclude_from_pos_files)
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
+		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -0.29 -1.236)
 			(end -0.29 -1.08)
@@ -12516,8 +12935,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 2 "/Row1")
-			(pinfunction "K")
+			(net "/Row1")
+			(pinfunction "K_1")
 			(pintype "passive")
 			(uuid "b7a37c9d-45ea-4e71-9fe5-929631b3f34c")
 		)
@@ -12527,8 +12946,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 4 "/Led3")
-			(pinfunction "A")
+			(net "/Led3")
+			(pinfunction "A_2")
 			(pintype "passive")
 			(uuid "f741b84c-43a1-4d5a-b8ff-bf63ec54f712")
 		)
@@ -12573,7 +12992,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -12614,7 +13033,14 @@
 		(path "/608a9dd8-6145-4cb6-96f3-1fe0011eea6e")
 		(sheetname "/")
 		(sheetfile "led-board.kicad_sch")
-		(attr through_hole exclude_from_pos_files)
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
+		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -0.29 -1.236)
 			(end -0.29 -1.08)
@@ -12739,8 +13165,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 14 "/Row7")
-			(pinfunction "K")
+			(net "/Row7")
+			(pinfunction "K_1")
 			(pintype "passive")
 			(uuid "20161712-64f5-4c75-915d-12fa4df2e874")
 		)
@@ -12750,8 +13176,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 17 "/Led8")
-			(pinfunction "A")
+			(net "/Led8")
+			(pinfunction "A_2")
 			(pintype "passive")
 			(uuid "59cc965a-90f0-4fa4-a6d0-150c94a94791")
 		)
@@ -12796,7 +13222,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -12837,7 +13263,14 @@
 		(path "/d38640ba-d101-4787-906b-1db0f6d81fe6")
 		(sheetname "/")
 		(sheetfile "led-board.kicad_sch")
-		(attr through_hole exclude_from_pos_files)
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
+		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -0.29 -1.236)
 			(end -0.29 -1.08)
@@ -12962,8 +13395,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 13 "/Row6")
-			(pinfunction "K")
+			(net "/Row6")
+			(pinfunction "K_1")
 			(pintype "passive")
 			(uuid "3715254f-eedb-4e39-88d9-6ff6c5f2ed76")
 		)
@@ -12973,8 +13406,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 1 "/Led1")
-			(pinfunction "A")
+			(net "/Led1")
+			(pinfunction "A_2")
 			(pintype "passive")
 			(uuid "8751311a-6617-4402-9266-73c61a2588b4")
 		)
@@ -13021,7 +13454,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -13049,7 +13482,14 @@
 		(path "/bd98d666-16e6-4940-a02e-29063816a956")
 		(sheetname "/")
 		(sheetfile "led-board.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins)
+			)
+		)
 		(attr smd exclude_from_bom dnp)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_circle
 			(center 0 0)
 			(end 1.25 0)
@@ -13121,7 +13561,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -13162,7 +13602,14 @@
 		(path "/fb4e57cf-8043-457e-893c-25e86adb2203")
 		(sheetname "/")
 		(sheetfile "led-board.kicad_sch")
-		(attr through_hole exclude_from_pos_files)
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
+		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -0.29 -1.236)
 			(end -0.29 -1.08)
@@ -13287,8 +13734,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 14 "/Row7")
-			(pinfunction "K")
+			(net "/Row7")
+			(pinfunction "K_1")
 			(pintype "passive")
 			(uuid "ad7a2dff-9afd-4303-a44e-faef66a8d0ea")
 		)
@@ -13298,8 +13745,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 3 "/Led2")
-			(pinfunction "A")
+			(net "/Led2")
+			(pinfunction "A_2")
 			(pintype "passive")
 			(uuid "725c9b25-4ea2-4baa-9f98-39b809b20d78")
 		)
@@ -13344,7 +13791,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -13385,7 +13832,14 @@
 		(path "/b5a9719e-ec3f-418f-89fc-f6bfa1f842de")
 		(sheetname "/")
 		(sheetfile "led-board.kicad_sch")
-		(attr through_hole exclude_from_pos_files)
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
+		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -0.29 -1.236)
 			(end -0.29 -1.08)
@@ -13510,8 +13964,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 13 "/Row6")
-			(pinfunction "K")
+			(net "/Row6")
+			(pinfunction "K_1")
 			(pintype "passive")
 			(uuid "7e163216-58dd-426a-bd07-e892dd5c2005")
 		)
@@ -13521,8 +13975,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 3 "/Led2")
-			(pinfunction "A")
+			(net "/Led2")
+			(pinfunction "A_2")
 			(pintype "passive")
 			(uuid "91340add-8ac6-43a9-a654-779f120126fc")
 		)
@@ -13567,7 +14021,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -13608,7 +14062,14 @@
 		(path "/4774e513-25a1-4f6f-8e1c-3a2ca62196b6")
 		(sheetname "/")
 		(sheetfile "led-board.kicad_sch")
-		(attr through_hole exclude_from_pos_files)
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
+		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -0.29 -1.236)
 			(end -0.29 -1.08)
@@ -13733,8 +14194,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 10 "/Row3")
-			(pinfunction "K")
+			(net "/Row3")
+			(pinfunction "K_1")
 			(pintype "passive")
 			(uuid "c057cc5e-0259-4f03-976e-b5cd3adcef91")
 		)
@@ -13744,8 +14205,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 7 "/Led6")
-			(pinfunction "A")
+			(net "/Led6")
+			(pinfunction "A_2")
 			(pintype "passive")
 			(uuid "cf3ca3c9-7bba-4b21-9bfe-ae3918439d20")
 		)
@@ -13790,7 +14251,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -13831,7 +14292,14 @@
 		(path "/bd22c748-1fa2-4105-98dc-bfe629cb418c")
 		(sheetname "/")
 		(sheetfile "led-board.kicad_sch")
-		(attr through_hole exclude_from_pos_files)
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
+		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -0.29 -1.236)
 			(end -0.29 -1.08)
@@ -13956,8 +14424,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 2 "/Row1")
-			(pinfunction "K")
+			(net "/Row1")
+			(pinfunction "K_1")
 			(pintype "passive")
 			(uuid "b67b87c7-4cce-4983-94e8-6487421496a2")
 		)
@@ -13967,8 +14435,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 6 "/Led5")
-			(pinfunction "A")
+			(net "/Led5")
+			(pinfunction "A_2")
 			(pintype "passive")
 			(uuid "52e50143-11ad-4b37-82c1-d280cff947b5")
 		)
@@ -14015,7 +14483,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -14043,7 +14511,14 @@
 		(path "/6d6e2dcf-1503-49f8-abaa-3159cce9217c")
 		(sheetname "/")
 		(sheetfile "led-board.kicad_sch")
-		(attr exclude_from_pos_files exclude_from_bom dnp)
+		(units
+			(unit
+				(name "A")
+				(pins "1")
+			)
+		)
+		(attr exclude_from_bom dnp)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_circle
 			(center 0 0)
 			(end 1.9 0)
@@ -14083,8 +14558,8 @@
 			(drill 2.2)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 16 "GND")
-			(pinfunction "1")
+			(net "GND")
+			(pinfunction "1_1")
 			(pintype "input")
 			(zone_connect 2)
 			(uuid "299103f7-3a77-4c96-a156-d8c12139a49d")
@@ -14119,7 +14594,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -14160,7 +14635,14 @@
 		(path "/a8c01032-a401-40ce-ab49-ed771439ebf5")
 		(sheetname "/")
 		(sheetfile "led-board.kicad_sch")
-		(attr through_hole exclude_from_pos_files)
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
+		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -0.29 -1.236)
 			(end -0.29 -1.08)
@@ -14285,8 +14767,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 15 "/Row8")
-			(pinfunction "K")
+			(net "/Row8")
+			(pinfunction "K_1")
 			(pintype "passive")
 			(uuid "166fe00f-a3d2-4d3f-aefa-f87601c1accf")
 		)
@@ -14296,8 +14778,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 7 "/Led6")
-			(pinfunction "A")
+			(net "/Led6")
+			(pinfunction "A_2")
 			(pintype "passive")
 			(uuid "67d2fd3d-015a-4b4d-898a-d052ee01bf9f")
 		)
@@ -14343,7 +14825,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -14373,7 +14855,14 @@
 		(path "/c35c80fb-def4-402e-a990-b5d337ef4c5b")
 		(sheetname "/")
 		(sheetfile "led-board.kicad_sch")
-		(attr exclude_from_pos_files exclude_from_bom)
+		(units
+			(unit
+				(name "A")
+				(pins "1")
+			)
+		)
+		(attr exclude_from_bom)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_circle
 			(center 0 0)
 			(end 0 0.7)
@@ -14411,8 +14900,8 @@
 			(at 0 0)
 			(size 1 1)
 			(layers "F.Cu" "F.Mask")
-			(net 5 "/Led4")
-			(pinfunction "1")
+			(net "/Led4")
+			(pinfunction "1_1")
 			(pintype "passive")
 			(uuid "7aad02cf-2036-4397-a3ff-ee316ec8943f")
 		)
@@ -14446,7 +14935,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -14487,7 +14976,14 @@
 		(path "/eb925d0d-41c8-40ab-8a48-3019506c3d71")
 		(sheetname "/")
 		(sheetfile "led-board.kicad_sch")
-		(attr through_hole exclude_from_pos_files)
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
+		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -0.29 -1.236)
 			(end -0.29 -1.08)
@@ -14612,8 +15108,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 13 "/Row6")
-			(pinfunction "K")
+			(net "/Row6")
+			(pinfunction "K_1")
 			(pintype "passive")
 			(uuid "fd4ea8ae-49dd-4aba-a1b8-9f73038188f2")
 		)
@@ -14623,8 +15119,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 17 "/Led8")
-			(pinfunction "A")
+			(net "/Led8")
+			(pinfunction "A_2")
 			(pintype "passive")
 			(uuid "4c8e774c-f67b-4603-aa35-c35fdd210ae1")
 		)
@@ -14669,7 +15165,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -14710,7 +15206,14 @@
 		(path "/2732ca4f-b8d5-4d1c-811a-7c1c7a46f68c")
 		(sheetname "/")
 		(sheetfile "led-board.kicad_sch")
-		(attr through_hole exclude_from_pos_files)
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
+		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -0.29 -1.236)
 			(end -0.29 -1.08)
@@ -14835,8 +15338,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 15 "/Row8")
-			(pinfunction "K")
+			(net "/Row8")
+			(pinfunction "K_1")
 			(pintype "passive")
 			(uuid "dab9136b-f8ec-4b5e-9355-25a6d38b0f99")
 		)
@@ -14846,8 +15349,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 3 "/Led2")
-			(pinfunction "A")
+			(net "/Led2")
+			(pinfunction "A_2")
 			(pintype "passive")
 			(uuid "52c57e65-2703-489c-a6db-146de5258e21")
 		)
@@ -14892,7 +15395,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -14933,7 +15436,14 @@
 		(path "/ff4f2864-c125-46a2-8a64-8a082ef4ff8c")
 		(sheetname "/")
 		(sheetfile "led-board.kicad_sch")
-		(attr through_hole exclude_from_pos_files)
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
+		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -0.29 -1.236)
 			(end -0.29 -1.08)
@@ -15058,8 +15568,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 10 "/Row3")
-			(pinfunction "K")
+			(net "/Row3")
+			(pinfunction "K_1")
 			(pintype "passive")
 			(uuid "3131b413-8659-4752-88ea-97f60e5cae0a")
 		)
@@ -15069,8 +15579,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 8 "/Led7")
-			(pinfunction "A")
+			(net "/Led7")
+			(pinfunction "A_2")
 			(pintype "passive")
 			(uuid "07377594-b34c-4bfb-9f5c-4a883840968e")
 		)
@@ -15116,7 +15626,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -15146,7 +15656,14 @@
 		(path "/e8fc36b7-f5aa-437c-8fd3-5fda81f8b0a1")
 		(sheetname "/")
 		(sheetfile "led-board.kicad_sch")
-		(attr exclude_from_pos_files exclude_from_bom)
+		(units
+			(unit
+				(name "A")
+				(pins "1")
+			)
+		)
+		(attr exclude_from_bom)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_circle
 			(center 0 0)
 			(end 0 0.7)
@@ -15184,8 +15701,8 @@
 			(at 0 0)
 			(size 1 1)
 			(layers "F.Cu" "F.Mask")
-			(net 8 "/Led7")
-			(pinfunction "1")
+			(net "/Led7")
+			(pinfunction "1_1")
 			(pintype "passive")
 			(uuid "9a8fbbbf-d405-4d46-b4f1-ae7140151850")
 		)
@@ -15219,7 +15736,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -15260,7 +15777,14 @@
 		(path "/d00930a0-a138-49b8-a382-64b1139c5689")
 		(sheetname "/")
 		(sheetfile "led-board.kicad_sch")
-		(attr through_hole exclude_from_pos_files)
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
+		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -0.29 -1.236)
 			(end -0.29 -1.08)
@@ -15385,8 +15909,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 12 "/Row5")
-			(pinfunction "K")
+			(net "/Row5")
+			(pinfunction "K_1")
 			(pintype "passive")
 			(uuid "430285a0-1ba1-4bfe-9aa7-19179bf4a652")
 		)
@@ -15396,8 +15920,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 7 "/Led6")
-			(pinfunction "A")
+			(net "/Led6")
+			(pinfunction "A_2")
 			(pintype "passive")
 			(uuid "06b59fcd-1473-4239-a830-b513077b1f3d")
 		)
@@ -15443,7 +15967,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -15473,7 +15997,14 @@
 		(path "/d67e0bee-faa2-4def-91c6-bca4ef80ac2b")
 		(sheetname "/")
 		(sheetfile "led-board.kicad_sch")
-		(attr exclude_from_pos_files exclude_from_bom)
+		(units
+			(unit
+				(name "A")
+				(pins "1")
+			)
+		)
+		(attr exclude_from_bom)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_circle
 			(center 0 0)
 			(end 0 0.7)
@@ -15511,8 +16042,8 @@
 			(at 0 0)
 			(size 1 1)
 			(layers "F.Cu" "F.Mask")
-			(net 7 "/Led6")
-			(pinfunction "1")
+			(net "/Led6")
+			(pinfunction "1_1")
 			(pintype "passive")
 			(uuid "6bd68ebb-201e-4c68-8dd8-0fc67cc54dc9")
 		)
@@ -15548,7 +16079,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -15576,7 +16107,14 @@
 		(path "/70dc0663-de9c-4613-94ee-f0810744776d")
 		(sheetname "/")
 		(sheetfile "led-board.kicad_sch")
-		(attr exclude_from_pos_files exclude_from_bom dnp)
+		(units
+			(unit
+				(name "A")
+				(pins "1")
+			)
+		)
+		(attr exclude_from_bom dnp)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_circle
 			(center 0 0)
 			(end 1.9 0)
@@ -15616,8 +16154,8 @@
 			(drill 2.2)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 16 "GND")
-			(pinfunction "1")
+			(net "GND")
+			(pinfunction "1_1")
 			(pintype "input")
 			(zone_connect 2)
 			(uuid "880490cb-adcb-41c9-a62a-1b2d0268cb3f")
@@ -15652,7 +16190,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -15693,7 +16231,14 @@
 		(path "/f6f7fb65-0a79-4c17-a3c8-30cf9ec2e917")
 		(sheetname "/")
 		(sheetfile "led-board.kicad_sch")
-		(attr through_hole exclude_from_pos_files)
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
+		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -0.29 -1.236)
 			(end -0.29 -1.08)
@@ -15818,8 +16363,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 15 "/Row8")
-			(pinfunction "K")
+			(net "/Row8")
+			(pinfunction "K_1")
 			(pintype "passive")
 			(uuid "28fc84a2-853f-4790-ae9f-04ad3880cad2")
 		)
@@ -15829,8 +16374,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 17 "/Led8")
-			(pinfunction "A")
+			(net "/Led8")
+			(pinfunction "A_2")
 			(pintype "passive")
 			(uuid "d870f806-4f6b-43df-a883-610a68e62420")
 		)
@@ -15875,7 +16420,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -15916,7 +16461,14 @@
 		(path "/7f85d489-8be8-44bf-a3bb-8d0840b34f57")
 		(sheetname "/")
 		(sheetfile "led-board.kicad_sch")
-		(attr through_hole exclude_from_pos_files)
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
+		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -0.29 -1.236)
 			(end -0.29 -1.08)
@@ -16041,8 +16593,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 9 "/Row2")
-			(pinfunction "K")
+			(net "/Row2")
+			(pinfunction "K_1")
 			(pintype "passive")
 			(uuid "950524d9-6652-40f0-96b4-33e152309230")
 		)
@@ -16052,8 +16604,8 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 8 "/Led7")
-			(pinfunction "A")
+			(net "/Led7")
+			(pinfunction "A_2")
 			(pintype "passive")
 			(uuid "4489e5ed-ab35-4d64-b11b-bf0b45c88c78")
 		)
@@ -16102,7 +16654,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(layer "B.Fab")
 			(hide yes)
@@ -16132,7 +16684,16 @@
 		(path "/b303d085-f4dc-400b-abba-e9b62a4b3d3a")
 		(sheetname "/")
 		(sheetfile "led-board.kicad_sch")
-		(attr through_hole exclude_from_bom dnp)
+		(units
+			(unit
+				(name "A")
+				(pins "1" "3" "5" "7" "9" "11" "13" "15" "2" "4" "6" "8" "10" "12" "14"
+					"16"
+				)
+			)
+		)
+		(attr through_hole exclude_from_bom)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -1.27 1.27)
 			(end 0 1.27)
@@ -17334,8 +17895,8 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 1 "/Led1")
-			(pinfunction "Pin_1")
+			(net "/Led1")
+			(pinfunction "Pin_1_1")
 			(pintype "passive")
 			(uuid "5e2e1808-df97-44e1-b9be-d1fb25843f67")
 		)
@@ -17345,8 +17906,8 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 2 "/Row1")
-			(pinfunction "Pin_2")
+			(net "/Row1")
+			(pinfunction "Pin_2_2")
 			(pintype "passive")
 			(uuid "f399c8e2-c64b-4470-beb7-8bbe77a284da")
 		)
@@ -17356,8 +17917,8 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 3 "/Led2")
-			(pinfunction "Pin_3")
+			(net "/Led2")
+			(pinfunction "Pin_3_3")
 			(pintype "passive")
 			(uuid "a847ac4a-aadf-4a74-8acf-3f0b5a7e05e8")
 		)
@@ -17367,8 +17928,8 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 9 "/Row2")
-			(pinfunction "Pin_4")
+			(net "/Row2")
+			(pinfunction "Pin_4_4")
 			(pintype "passive")
 			(uuid "7b79f7eb-c5d7-44c3-a8d8-9d374ffec0aa")
 		)
@@ -17378,8 +17939,8 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 4 "/Led3")
-			(pinfunction "Pin_5")
+			(net "/Led3")
+			(pinfunction "Pin_5_5")
 			(pintype "passive")
 			(uuid "51c52559-f4e0-44c0-8d8e-e9e42acb2122")
 		)
@@ -17389,8 +17950,8 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 10 "/Row3")
-			(pinfunction "Pin_6")
+			(net "/Row3")
+			(pinfunction "Pin_6_6")
 			(pintype "passive")
 			(uuid "76a29a30-245a-4fbb-9fc5-b783947c1141")
 		)
@@ -17400,8 +17961,8 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 5 "/Led4")
-			(pinfunction "Pin_7")
+			(net "/Led4")
+			(pinfunction "Pin_7_7")
 			(pintype "passive")
 			(uuid "6690107a-ee2a-4eae-b301-5a0c3c2fa0e3")
 		)
@@ -17411,8 +17972,8 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 11 "/Row4")
-			(pinfunction "Pin_8")
+			(net "/Row4")
+			(pinfunction "Pin_8_8")
 			(pintype "passive")
 			(uuid "e255458b-a6bd-48ea-bf8d-9f9e9c724273")
 		)
@@ -17422,8 +17983,8 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 6 "/Led5")
-			(pinfunction "Pin_9")
+			(net "/Led5")
+			(pinfunction "Pin_9_9")
 			(pintype "passive")
 			(uuid "6b7cebf4-7894-454a-a8d2-7d4a5026f48b")
 		)
@@ -17433,8 +17994,8 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 12 "/Row5")
-			(pinfunction "Pin_10")
+			(net "/Row5")
+			(pinfunction "Pin_10_10")
 			(pintype "passive")
 			(uuid "af54bd3c-81cf-4260-b943-65badcd01cff")
 		)
@@ -17444,8 +18005,8 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 7 "/Led6")
-			(pinfunction "Pin_11")
+			(net "/Led6")
+			(pinfunction "Pin_11_11")
 			(pintype "passive")
 			(uuid "f22d63bf-5673-41e9-ac16-4c459fc963f0")
 		)
@@ -17455,8 +18016,8 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 13 "/Row6")
-			(pinfunction "Pin_12")
+			(net "/Row6")
+			(pinfunction "Pin_12_12")
 			(pintype "passive")
 			(uuid "2a580f30-2c03-47ef-8795-93d2479f0501")
 		)
@@ -17466,8 +18027,8 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 8 "/Led7")
-			(pinfunction "Pin_13")
+			(net "/Led7")
+			(pinfunction "Pin_13_13")
 			(pintype "passive")
 			(uuid "17dbc141-7d51-4323-88ef-96af3bef3bd5")
 		)
@@ -17477,8 +18038,8 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 14 "/Row7")
-			(pinfunction "Pin_14")
+			(net "/Row7")
+			(pinfunction "Pin_14_14")
 			(pintype "passive")
 			(uuid "4b0dca38-78be-4c6b-a6f5-1b904be7d7eb")
 		)
@@ -17488,8 +18049,8 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 17 "/Led8")
-			(pinfunction "Pin_15")
+			(net "/Led8")
+			(pinfunction "Pin_15_15")
 			(pintype "passive")
 			(uuid "5526f538-4bee-4a3a-9c6d-c508cb0b5d2f")
 		)
@@ -17499,8 +18060,8 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 15 "/Row8")
-			(pinfunction "Pin_16")
+			(net "/Row8")
+			(pinfunction "Pin_16_16")
 			(pintype "passive")
 			(uuid "1c3504f9-070e-4215-8de5-a8ad933c64b4")
 		)
@@ -17529,6 +18090,58 @@
 		(uuid "00efbfa2-c1ac-41b5-91da-c85347e686e2")
 	)
 	(gr_line
+		(start 48.895 94.274936)
+		(end 48.895 24.257)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "882c86fa-ded6-4d29-85bc-aad509ca847a")
+	)
+	(gr_line
+		(start 51.943025 20.955)
+		(end 114.3 20.955)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "ffeea821-a4bd-4016-bfe3-4005e2b3a6c5")
+	)
+	(gr_arc
+		(start 52.07 97.449936)
+		(mid 49.824936 96.52)
+		(end 48.895 94.274936)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "4f1abd8d-52e5-428b-aac7-a61595dab9ee")
+	)
+	(gr_arc
+		(start 114.3 20.955)
+		(mid 116.545064 21.884936)
+		(end 117.475 24.13)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "f760128d-372c-4df5-b5ee-d184224330a5")
+	)
+	(gr_line
+		(start 114.3 97.449936)
+		(end 52.07 97.449936)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "749520b7-ef51-410e-bd57-9c8325fecbaf")
+	)
+	(gr_line
 		(start 117.475 24.13)
 		(end 117.475 94.2749)
 		(stroke
@@ -17549,58 +18162,6 @@
 		(layer "Edge.Cuts")
 		(uuid "4584b5f1-4b54-476c-8209-2ea7d256c5c8")
 	)
-	(gr_arc
-		(start 52.07 97.449936)
-		(mid 49.824936 96.52)
-		(end 48.895 94.274936)
-		(stroke
-			(width 0.05)
-			(type default)
-		)
-		(layer "Edge.Cuts")
-		(uuid "4f1abd8d-52e5-428b-aac7-a61595dab9ee")
-	)
-	(gr_line
-		(start 114.3 97.449936)
-		(end 52.07 97.449936)
-		(stroke
-			(width 0.05)
-			(type default)
-		)
-		(layer "Edge.Cuts")
-		(uuid "749520b7-ef51-410e-bd57-9c8325fecbaf")
-	)
-	(gr_line
-		(start 48.895 94.274936)
-		(end 48.895 24.257)
-		(stroke
-			(width 0.05)
-			(type default)
-		)
-		(layer "Edge.Cuts")
-		(uuid "882c86fa-ded6-4d29-85bc-aad509ca847a")
-	)
-	(gr_arc
-		(start 114.3 20.955)
-		(mid 116.545064 21.884936)
-		(end 117.475 24.13)
-		(stroke
-			(width 0.05)
-			(type default)
-		)
-		(layer "Edge.Cuts")
-		(uuid "f760128d-372c-4df5-b5ee-d184224330a5")
-	)
-	(gr_line
-		(start 51.943025 20.955)
-		(end 114.3 20.955)
-		(stroke
-			(width 0.05)
-			(type default)
-		)
-		(layer "Edge.Cuts")
-		(uuid "ffeea821-a4bd-4016-bfe3-4005e2b3a6c5")
-	)
 	(gr_text "JLCJLCJLCJLC"
 		(at 65.913 32.893 0)
 		(layer "F.SilkS")
@@ -17618,7 +18179,7 @@
 		(end 59.69 90.805)
 		(width 0.3)
 		(layer "F.Cu")
-		(net 1)
+		(net "/Led1")
 		(uuid "0c6c98f8-8bb1-4923-844b-205e643802df")
 	)
 	(segment
@@ -17626,7 +18187,7 @@
 		(end 56.515 80.645)
 		(width 0.3)
 		(layer "F.Cu")
-		(net 1)
+		(net "/Led1")
 		(uuid "150b3fd8-eaa6-45ed-a6a3-c600deca382f")
 	)
 	(segment
@@ -17634,7 +18195,7 @@
 		(end 56.515 24.13)
 		(width 0.5)
 		(layer "F.Cu")
-		(net 1)
+		(net "/Led1")
 		(uuid "53b2e2c9-3dd5-4dee-9f43-62bebb45872e")
 	)
 	(segment
@@ -17642,7 +18203,7 @@
 		(end 55.245 80.645)
 		(width 0.3)
 		(layer "F.Cu")
-		(net 1)
+		(net "/Led1")
 		(uuid "6deb53ac-dd3d-4314-bebe-79ce6a6fd91e")
 	)
 	(segment
@@ -17650,7 +18211,7 @@
 		(end 54.737 81.153)
 		(width 0.3)
 		(layer "F.Cu")
-		(net 1)
+		(net "/Led1")
 		(uuid "ac2c0b15-c32b-40ae-9df9-2358e0653d59")
 	)
 	(segment
@@ -17658,7 +18219,7 @@
 		(end 54.737 85.852)
 		(width 0.3)
 		(layer "F.Cu")
-		(net 1)
+		(net "/Led1")
 		(uuid "d5e7c6b6-a64f-43ee-9133-937ee1b97cb3")
 	)
 	(segment
@@ -17666,7 +18227,7 @@
 		(end 54.737 50.165)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 1)
+		(net "/Led1")
 		(uuid "04d69dff-2b91-40da-8cdb-109fac6610e9")
 	)
 	(segment
@@ -17674,7 +18235,7 @@
 		(end 54.737 65.278)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 1)
+		(net "/Led1")
 		(uuid "08142054-1fba-42b6-9003-e420e9c2df9c")
 	)
 	(segment
@@ -17682,7 +18243,7 @@
 		(end 54.737 34.925)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 1)
+		(net "/Led1")
 		(uuid "199d3098-5b8b-4f84-b4cd-4b3ebe6ba847")
 	)
 	(segment
@@ -17690,7 +18251,7 @@
 		(end 55.372 80.645)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 1)
+		(net "/Led1")
 		(uuid "22a81a21-58a2-4811-9e64-0e9ae8e4546c")
 	)
 	(segment
@@ -17698,7 +18259,7 @@
 		(end 54.737 65.278)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 1)
+		(net "/Led1")
 		(uuid "2d77d6ea-5e73-44f5-9e90-50960192ec8c")
 	)
 	(segment
@@ -17706,7 +18267,7 @@
 		(end 54.737 27.813)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 1)
+		(net "/Led1")
 		(uuid "2f05c08b-1c31-4a0d-959c-22c4874b21c7")
 	)
 	(segment
@@ -17714,7 +18275,7 @@
 		(end 54.737 57.785)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 1)
+		(net "/Led1")
 		(uuid "3a5e58c6-7914-404f-afb9-7de09e4a7cab")
 	)
 	(segment
@@ -17722,7 +18283,7 @@
 		(end 54.737 73.025)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 1)
+		(net "/Led1")
 		(uuid "3e8401c6-d4bc-4c38-8027-ab72ef62485b")
 	)
 	(segment
@@ -17730,7 +18291,7 @@
 		(end 55.245 27.305)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 1)
+		(net "/Led1")
 		(uuid "56ca837a-e69d-44e6-830a-2a5917146551")
 	)
 	(segment
@@ -17738,7 +18299,7 @@
 		(end 54.737 80.01)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 1)
+		(net "/Led1")
 		(uuid "7ec42978-cf15-4d4f-b348-b84dc454f41d")
 	)
 	(segment
@@ -17746,7 +18307,7 @@
 		(end 54.864 42.545)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 1)
+		(net "/Led1")
 		(uuid "90d395c9-0a22-4f20-a6be-7d249fcbb1df")
 	)
 	(segment
@@ -17754,7 +18315,7 @@
 		(end 54.737 34.925)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 1)
+		(net "/Led1")
 		(uuid "963848cc-11cf-4916-a647-959f759446dc")
 	)
 	(segment
@@ -17762,7 +18323,7 @@
 		(end 54.737 42.672)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 1)
+		(net "/Led1")
 		(uuid "a6d80e76-2215-4cef-b547-b4b386c16e2f")
 	)
 	(segment
@@ -17770,7 +18331,7 @@
 		(end 54.864 65.405)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 1)
+		(net "/Led1")
 		(uuid "a9b26876-21f1-4393-a623-0d3fc3fc4d9d")
 	)
 	(segment
@@ -17778,7 +18339,7 @@
 		(end 56.515 80.645)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 1)
+		(net "/Led1")
 		(uuid "bae9ba55-b01b-4d73-81ee-3faf4054e258")
 	)
 	(segment
@@ -17786,7 +18347,7 @@
 		(end 54.737 57.785)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 1)
+		(net "/Led1")
 		(uuid "bfbda426-95b7-43b5-85df-192ae8fad7f1")
 	)
 	(segment
@@ -17794,7 +18355,7 @@
 		(end 54.737 73.025)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 1)
+		(net "/Led1")
 		(uuid "c032bba2-d9a2-413d-b181-5514787ebe5c")
 	)
 	(segment
@@ -17802,7 +18363,7 @@
 		(end 54.737 50.165)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 1)
+		(net "/Led1")
 		(uuid "d3e28e6d-5b83-41ae-a0f6-4f75f2ce0150")
 	)
 	(segment
@@ -17810,7 +18371,7 @@
 		(end 54.737 42.672)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 1)
+		(net "/Led1")
 		(uuid "f0f4cf16-b857-4646-aab4-951e0aac33be")
 	)
 	(segment
@@ -17818,7 +18379,7 @@
 		(end 67.945 29.845)
 		(width 1)
 		(layer "F.Cu")
-		(net 2)
+		(net "/Row1")
 		(uuid "105df181-069f-4b0d-a8bd-f77512e9602b")
 	)
 	(segment
@@ -17826,7 +18387,7 @@
 		(end 73.279 92.329)
 		(width 0.5)
 		(layer "F.Cu")
-		(net 2)
+		(net "/Row1")
 		(uuid "4d4a3153-9c5d-4110-94d2-007f9c15c2c9")
 	)
 	(segment
@@ -17834,7 +18395,7 @@
 		(end 60.071 92.329)
 		(width 0.5)
 		(layer "F.Cu")
-		(net 2)
+		(net "/Row1")
 		(uuid "7f02b3f8-3722-4ab4-8f32-bab9ce975579")
 	)
 	(segment
@@ -17842,7 +18403,7 @@
 		(end 109.855 29.845)
 		(width 1)
 		(layer "F.Cu")
-		(net 2)
+		(net "/Row1")
 		(uuid "e093fb95-a02d-4a8b-bb67-e1fab483667a")
 	)
 	(via
@@ -17850,7 +18411,17 @@
 		(size 0.6)
 		(drill 0.3)
 		(layers "F.Cu" "B.Cu")
-		(net 2)
+		(capping no)
+		(covering
+			(front no)
+			(back no)
+		)
+		(plugging
+			(front no)
+			(back no)
+		)
+		(filling no)
+		(net "/Row1")
 		(uuid "8147afb2-3c03-417c-b535-3e86f65c5e7e")
 	)
 	(segment
@@ -17858,7 +18429,7 @@
 		(end 56.515 29.845)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 2)
+		(net "/Row1")
 		(uuid "1db5bc12-4688-4ce0-939b-41554db79f48")
 	)
 	(segment
@@ -17866,7 +18437,7 @@
 		(end 60.071 29.845)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 2)
+		(net "/Row1")
 		(uuid "7c88cee6-a543-44ec-bc20-ab96b9c1c50e")
 	)
 	(segment
@@ -17874,7 +18445,7 @@
 		(end 76.835 89.408)
 		(width 0.5)
 		(layer "F.Cu")
-		(net 3)
+		(net "/Led2")
 		(uuid "0f51bbd9-44b8-47cf-a4f8-e460bd6cefe2")
 	)
 	(segment
@@ -17882,7 +18453,7 @@
 		(end 76.454 89.027)
 		(width 0.5)
 		(layer "F.Cu")
-		(net 3)
+		(net "/Led2")
 		(uuid "3512d1f2-5315-462d-846c-034b1c439fc1")
 	)
 	(segment
@@ -17890,7 +18461,7 @@
 		(end 64.135 27.305)
 		(width 0.5)
 		(layer "F.Cu")
-		(net 3)
+		(net "/Led2")
 		(uuid "966f7480-e844-4cd4-b1c6-e87555bb4104")
 	)
 	(segment
@@ -17898,7 +18469,7 @@
 		(end 62.484 89.027)
 		(width 0.5)
 		(layer "F.Cu")
-		(net 3)
+		(net "/Led2")
 		(uuid "d8e20bd3-1743-41c0-b3e7-bed86f963e71")
 	)
 	(segment
@@ -17906,7 +18477,7 @@
 		(end 62.484 88.9)
 		(width 0.3)
 		(layer "F.Cu")
-		(net 3)
+		(net "/Led2")
 		(uuid "ff42d2c9-e3c7-432d-a2da-7a76a5ad9baf")
 	)
 	(via
@@ -17914,7 +18485,17 @@
 		(size 0.6)
 		(drill 0.3)
 		(layers "F.Cu" "B.Cu")
-		(net 3)
+		(capping no)
+		(covering
+			(front no)
+			(back no)
+		)
+		(plugging
+			(front no)
+			(back no)
+		)
+		(filling no)
+		(net "/Led2")
 		(uuid "e8a71f2b-f7cc-4836-b633-45926afcdd87")
 	)
 	(segment
@@ -17922,7 +18503,7 @@
 		(end 62.357 34.798)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 3)
+		(net "/Led2")
 		(uuid "1399a21a-32b0-4d7e-9669-0e43a1d782b5")
 	)
 	(segment
@@ -17930,7 +18511,7 @@
 		(end 62.357 57.785)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 3)
+		(net "/Led2")
 		(uuid "1e2eeea7-23b9-4743-be8f-83f1ead1477c")
 	)
 	(segment
@@ -17938,7 +18519,7 @@
 		(end 62.357 65.405)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 3)
+		(net "/Led2")
 		(uuid "27cdd36b-7f7f-4905-840a-3f247f69b610")
 	)
 	(segment
@@ -17946,7 +18527,7 @@
 		(end 62.357 57.785)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 3)
+		(net "/Led2")
 		(uuid "2d506399-3a5f-46aa-ae17-6ada3a7b106b")
 	)
 	(segment
@@ -17954,7 +18535,7 @@
 		(end 62.357 27.305)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 3)
+		(net "/Led2")
 		(uuid "34ff0d2a-ce8e-4739-a107-5e1b21ac19b3")
 	)
 	(segment
@@ -17962,7 +18543,7 @@
 		(end 64.135 80.645)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 3)
+		(net "/Led2")
 		(uuid "38d011e9-9aa8-42dd-a2b3-539a1897c462")
 	)
 	(segment
@@ -17970,7 +18551,7 @@
 		(end 62.611 80.645)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 3)
+		(net "/Led2")
 		(uuid "39c01b1e-200b-48da-a121-ef610081135b")
 	)
 	(segment
@@ -17978,7 +18559,7 @@
 		(end 62.357 50.165)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 3)
+		(net "/Led2")
 		(uuid "43b0e666-e167-4a38-a48d-18bf81219727")
 	)
 	(segment
@@ -17986,7 +18567,7 @@
 		(end 62.357 65.405)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 3)
+		(net "/Led2")
 		(uuid "48a7134b-67b5-4111-8b5d-f8a57d6f9c24")
 	)
 	(segment
@@ -17994,7 +18575,7 @@
 		(end 62.484 34.925)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 3)
+		(net "/Led2")
 		(uuid "5e7bd857-c930-41be-9feb-4d107b41e132")
 	)
 	(segment
@@ -18002,7 +18583,7 @@
 		(end 62.357 34.798)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 3)
+		(net "/Led2")
 		(uuid "913eb013-f0d6-4459-8fa3-ef1d3c7051bf")
 	)
 	(segment
@@ -18010,7 +18591,7 @@
 		(end 62.484 42.545)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 3)
+		(net "/Led2")
 		(uuid "92c3c719-7678-4439-bc70-782c9dc4e494")
 	)
 	(segment
@@ -18018,7 +18599,7 @@
 		(end 62.611 80.645)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 3)
+		(net "/Led2")
 		(uuid "98adf36b-c6a7-4481-a117-fc8ac8c67a31")
 	)
 	(segment
@@ -18026,7 +18607,7 @@
 		(end 62.357 42.418)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 3)
+		(net "/Led2")
 		(uuid "b3333e9b-ba25-473c-a824-406c5e772a36")
 	)
 	(segment
@@ -18034,7 +18615,7 @@
 		(end 62.357 73.025)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 3)
+		(net "/Led2")
 		(uuid "b481bd67-3c4a-437e-b6d5-3322c5b51e95")
 	)
 	(segment
@@ -18042,7 +18623,7 @@
 		(end 62.357 80.899)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 3)
+		(net "/Led2")
 		(uuid "d171cb4a-e6c0-48c5-8da7-3b762f040f68")
 	)
 	(segment
@@ -18050,7 +18631,7 @@
 		(end 62.357 42.418)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 3)
+		(net "/Led2")
 		(uuid "d1e7f77b-2e29-443f-b6d1-458080ad430a")
 	)
 	(segment
@@ -18058,7 +18639,7 @@
 		(end 62.357 73.025)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 3)
+		(net "/Led2")
 		(uuid "d2170586-4609-490d-a766-d6a70b9308c3")
 	)
 	(segment
@@ -18066,7 +18647,7 @@
 		(end 62.357 50.165)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 3)
+		(net "/Led2")
 		(uuid "d5b444bf-ed0e-4f01-80e8-573c7068606b")
 	)
 	(segment
@@ -18074,7 +18655,7 @@
 		(end 62.357 88.9)
 		(width 0.3)
 		(layer "B.Cu")
-		(net 3)
+		(net "/Led2")
 		(uuid "ec94fd49-f00e-4c3b-92c1-7cb483c61db9")
 	)
 	(segment
@@ -18082,7 +18663,7 @@
 		(end 62.357 80.391)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 3)
+		(net "/Led2")
 		(uuid "f74445c8-34e2-4f05-a06f-e1eeaf726cf0")
 	)
 	(segment
@@ -18090,7 +18671,7 @@
 		(end 78.613 87.63)
 		(width 0.5)
 		(layer "F.Cu")
-		(net 4)
+		(net "/Led3")
 		(uuid "0e865b86-bba2-4651-894d-0f1b590dc37d")
 	)
 	(segment
@@ -18098,7 +18679,7 @@
 		(end 79.375 88.392)
 		(width 0.5)
 		(layer "F.Cu")
-		(net 4)
+		(net "/Led3")
 		(uuid "2f2e8c7d-bb31-4a25-96b6-e80233c0ea43")
 	)
 	(segment
@@ -18106,7 +18687,7 @@
 		(end 69.977 87.63)
 		(width 0.5)
 		(layer "F.Cu")
-		(net 4)
+		(net "/Led3")
 		(uuid "92063769-e874-4965-b249-daea9774f8f6")
 	)
 	(segment
@@ -18114,7 +18695,7 @@
 		(end 71.755 27.305)
 		(width 0.5)
 		(layer "F.Cu")
-		(net 4)
+		(net "/Led3")
 		(uuid "a5bba9b2-5b1b-414c-8d8c-fcab6459c1a8")
 	)
 	(segment
@@ -18122,7 +18703,7 @@
 		(end 69.85 87.503)
 		(width 0.5)
 		(layer "F.Cu")
-		(net 4)
+		(net "/Led3")
 		(uuid "ca38d89a-6fc3-4968-9f63-8fd46a1ee0a1")
 	)
 	(via
@@ -18130,7 +18711,17 @@
 		(size 0.6)
 		(drill 0.3)
 		(layers "F.Cu" "B.Cu")
-		(net 4)
+		(capping no)
+		(covering
+			(front no)
+			(back no)
+		)
+		(plugging
+			(front no)
+			(back no)
+		)
+		(filling no)
+		(net "/Led3")
 		(uuid "2810cf03-cbac-4026-b813-6b06e67b7baa")
 	)
 	(segment
@@ -18138,7 +18729,7 @@
 		(end 69.85 42.672)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 4)
+		(net "/Led3")
 		(uuid "01bbddec-b082-4c90-8428-64c6889595fa")
 	)
 	(segment
@@ -18146,7 +18737,7 @@
 		(end 69.977 34.925)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 4)
+		(net "/Led3")
 		(uuid "25e76ded-ef93-420c-a5f8-bf03eded1d9d")
 	)
 	(segment
@@ -18154,7 +18745,7 @@
 		(end 69.977 42.545)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 4)
+		(net "/Led3")
 		(uuid "3c3da9d4-e98f-43c7-98e7-8190117520fd")
 	)
 	(segment
@@ -18162,7 +18753,7 @@
 		(end 69.85 35.052)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 4)
+		(net "/Led3")
 		(uuid "3dc98ed1-a5d5-47cb-bc21-13ce51243aa2")
 	)
 	(segment
@@ -18170,7 +18761,7 @@
 		(end 69.85 27.559)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 4)
+		(net "/Led3")
 		(uuid "3de49e4f-6be9-4504-a2ea-b2da173ed058")
 	)
 	(segment
@@ -18178,7 +18769,7 @@
 		(end 69.85 57.785)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 4)
+		(net "/Led3")
 		(uuid "3f3861ed-46a2-4526-9b8f-93591e3631c4")
 	)
 	(segment
@@ -18186,7 +18777,7 @@
 		(end 69.85 50.165)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 4)
+		(net "/Led3")
 		(uuid "4d2cf35a-02e4-47b8-88b1-b794a566425e")
 	)
 	(segment
@@ -18194,7 +18785,7 @@
 		(end 69.85 42.672)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 4)
+		(net "/Led3")
 		(uuid "53f29932-aad8-45a7-a277-354f777de1ef")
 	)
 	(segment
@@ -18202,7 +18793,7 @@
 		(end 69.85 73.025)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 4)
+		(net "/Led3")
 		(uuid "5fadcb54-b0f3-421c-8dcd-e26be1c3c00f")
 	)
 	(segment
@@ -18210,7 +18801,7 @@
 		(end 69.85 80.391)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 4)
+		(net "/Led3")
 		(uuid "60771625-b6b7-40cd-a4b8-23e2f63e629f")
 	)
 	(segment
@@ -18218,7 +18809,7 @@
 		(end 69.85 73.025)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 4)
+		(net "/Led3")
 		(uuid "69fb62f2-58e7-43be-8b7a-d5ada2ef9f41")
 	)
 	(segment
@@ -18226,7 +18817,7 @@
 		(end 69.85 65.405)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 4)
+		(net "/Led3")
 		(uuid "7fdbf5e6-9886-48f7-a680-111018c76bb8")
 	)
 	(segment
@@ -18234,7 +18825,7 @@
 		(end 70.104 80.645)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 4)
+		(net "/Led3")
 		(uuid "88d6f48d-501b-424f-8b7e-69221202e4ec")
 	)
 	(segment
@@ -18242,7 +18833,7 @@
 		(end 69.85 50.165)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 4)
+		(net "/Led3")
 		(uuid "9ad14668-14e0-4f20-9d17-00c1e67ecc6f")
 	)
 	(segment
@@ -18250,7 +18841,7 @@
 		(end 69.85 65.405)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 4)
+		(net "/Led3")
 		(uuid "a5dc61a8-0a4c-408c-a09c-c6c8d3601285")
 	)
 	(segment
@@ -18258,7 +18849,7 @@
 		(end 70.104 80.645)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 4)
+		(net "/Led3")
 		(uuid "ab201c01-6ad2-43c6-b1ae-f338dacb22bc")
 	)
 	(segment
@@ -18266,7 +18857,7 @@
 		(end 69.85 57.785)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 4)
+		(net "/Led3")
 		(uuid "b72663b5-3f96-494d-a991-5096defc8293")
 	)
 	(segment
@@ -18274,7 +18865,7 @@
 		(end 69.85 35.052)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 4)
+		(net "/Led3")
 		(uuid "bbf2e46a-e990-4906-b8b3-8f0e67a663bc")
 	)
 	(segment
@@ -18282,7 +18873,7 @@
 		(end 70.104 27.305)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 4)
+		(net "/Led3")
 		(uuid "c14022d7-6445-4f38-a94c-1e90483fe630")
 	)
 	(segment
@@ -18290,7 +18881,7 @@
 		(end 69.85 80.899)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 4)
+		(net "/Led3")
 		(uuid "ca036909-6af7-41f5-b61c-a26ad26d2438")
 	)
 	(segment
@@ -18298,7 +18889,7 @@
 		(end 71.755 80.645)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 4)
+		(net "/Led3")
 		(uuid "f85da4a3-98f6-4e92-aea1-6b5e3bdae295")
 	)
 	(segment
@@ -18306,7 +18897,7 @@
 		(end 77.597 86.233)
 		(width 0.5)
 		(layer "F.Cu")
-		(net 5)
+		(net "/Led4")
 		(uuid "46e224a3-04e7-4eaf-bb9e-dd8382bd60aa")
 	)
 	(segment
@@ -18314,7 +18905,7 @@
 		(end 79.375 27.305)
 		(width 0.5)
 		(layer "F.Cu")
-		(net 5)
+		(net "/Led4")
 		(uuid "55e5afc1-051d-403b-9bc0-e429a8d7e8bb")
 	)
 	(segment
@@ -18322,7 +18913,7 @@
 		(end 81.153 86.233)
 		(width 0.5)
 		(layer "F.Cu")
-		(net 5)
+		(net "/Led4")
 		(uuid "8c4553a1-0abd-44f3-9686-ce5642653216")
 	)
 	(segment
@@ -18330,7 +18921,7 @@
 		(end 81.915 86.995)
 		(width 0.5)
 		(layer "F.Cu")
-		(net 5)
+		(net "/Led4")
 		(uuid "c41b6ac7-7e77-4cb1-ad08-1bf7df8054e6")
 	)
 	(via
@@ -18338,7 +18929,17 @@
 		(size 0.6)
 		(drill 0.3)
 		(layers "F.Cu" "B.Cu")
-		(net 5)
+		(capping no)
+		(covering
+			(front no)
+			(back no)
+		)
+		(plugging
+			(front no)
+			(back no)
+		)
+		(filling no)
+		(net "/Led4")
 		(uuid "ea39edb3-e5e3-4541-80b5-6f6bc2b92240")
 	)
 	(segment
@@ -18346,7 +18947,7 @@
 		(end 77.343 27.686)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 5)
+		(net "/Led4")
 		(uuid "03d70638-6ea5-4a53-9e91-a3ba3f1099c3")
 	)
 	(segment
@@ -18354,7 +18955,7 @@
 		(end 77.343 34.798)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 5)
+		(net "/Led4")
 		(uuid "1c3bb6c1-4904-402a-9082-6e8fe32e5d49")
 	)
 	(segment
@@ -18362,7 +18963,7 @@
 		(end 77.724 27.305)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 5)
+		(net "/Led4")
 		(uuid "2ece68dd-c369-4952-aa6b-4302bd525b52")
 	)
 	(segment
@@ -18370,7 +18971,7 @@
 		(end 79.375 80.645)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 5)
+		(net "/Led4")
 		(uuid "45a83729-3575-426b-8cdd-cfbc15ffc60f")
 	)
 	(segment
@@ -18378,7 +18979,7 @@
 		(end 77.47 65.405)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 5)
+		(net "/Led4")
 		(uuid "4b674fe9-bc9a-4536-92ca-780d7e987ce5")
 	)
 	(segment
@@ -18386,7 +18987,7 @@
 		(end 77.343 73.025)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 5)
+		(net "/Led4")
 		(uuid "509dca9d-d006-4e09-a696-0b6385a0f92c")
 	)
 	(segment
@@ -18394,7 +18995,7 @@
 		(end 77.47 50.165)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 5)
+		(net "/Led4")
 		(uuid "52b0e64f-93b0-48db-b7d8-fb52198a0c09")
 	)
 	(segment
@@ -18402,7 +19003,7 @@
 		(end 77.216 81.153)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 5)
+		(net "/Led4")
 		(uuid "565ad6eb-d8ee-421d-8bd5-774f19827556")
 	)
 	(segment
@@ -18410,7 +19011,7 @@
 		(end 77.343 57.658)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 5)
+		(net "/Led4")
 		(uuid "61a5b912-bfe5-4cb7-83a3-17a4b52da028")
 	)
 	(segment
@@ -18418,7 +19019,7 @@
 		(end 77.724 80.645)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 5)
+		(net "/Led4")
 		(uuid "813ee5f5-cd2b-4f49-a5b7-f176c9b84e7f")
 	)
 	(segment
@@ -18426,7 +19027,7 @@
 		(end 77.47 57.785)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 5)
+		(net "/Led4")
 		(uuid "84f2873c-e254-4730-9c55-7e5c7041e5bc")
 	)
 	(segment
@@ -18434,7 +19035,7 @@
 		(end 77.343 50.038)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 5)
+		(net "/Led4")
 		(uuid "8c154150-6e36-4eda-b5d7-68de8cfd8fc1")
 	)
 	(segment
@@ -18442,7 +19043,7 @@
 		(end 77.343 42.545)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 5)
+		(net "/Led4")
 		(uuid "92829c9c-45a8-470f-8c18-ae15528f298a")
 	)
 	(segment
@@ -18450,7 +19051,7 @@
 		(end 77.47 34.925)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 5)
+		(net "/Led4")
 		(uuid "95b53d3b-9d32-484e-b1f7-7a268a9c518b")
 	)
 	(segment
@@ -18458,7 +19059,7 @@
 		(end 77.343 34.798)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 5)
+		(net "/Led4")
 		(uuid "b734d078-eda2-4a2a-b34a-d1c6c98d2840")
 	)
 	(segment
@@ -18466,7 +19067,7 @@
 		(end 77.216 85.852)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 5)
+		(net "/Led4")
 		(uuid "b8ae2f49-267e-4f33-8af8-b912b43c029a")
 	)
 	(segment
@@ -18474,7 +19075,7 @@
 		(end 77.343 42.545)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 5)
+		(net "/Led4")
 		(uuid "c4a78685-88b8-4fc5-9706-ff9e7eb7e7c4")
 	)
 	(segment
@@ -18482,7 +19083,7 @@
 		(end 77.343 65.278)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 5)
+		(net "/Led4")
 		(uuid "c9b58e57-f395-4571-a0f4-69d9e0e22bac")
 	)
 	(segment
@@ -18490,7 +19091,7 @@
 		(end 77.343 80.264)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 5)
+		(net "/Led4")
 		(uuid "cce732da-fcad-42bd-b81b-4497e6d9278f")
 	)
 	(segment
@@ -18498,7 +19099,7 @@
 		(end 77.724 80.645)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 5)
+		(net "/Led4")
 		(uuid "cdbc3b47-11a1-4a1c-8de4-3ffc91896433")
 	)
 	(segment
@@ -18506,7 +19107,7 @@
 		(end 77.343 73.025)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 5)
+		(net "/Led4")
 		(uuid "d32a8a95-adf3-48c8-9b48-3af5c85b3242")
 	)
 	(segment
@@ -18514,7 +19115,7 @@
 		(end 77.343 57.658)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 5)
+		(net "/Led4")
 		(uuid "e10dab13-c84f-4564-b5e7-02713de7f6a3")
 	)
 	(segment
@@ -18522,7 +19123,7 @@
 		(end 77.343 65.278)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 5)
+		(net "/Led4")
 		(uuid "ef515d2b-41c5-49cc-b447-3c3d9a6cf920")
 	)
 	(segment
@@ -18530,7 +19131,7 @@
 		(end 77.343 50.038)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 5)
+		(net "/Led4")
 		(uuid "f5e6a25c-694d-4480-9a33-8a2b14ff85aa")
 	)
 	(segment
@@ -18538,7 +19139,7 @@
 		(end 84.455 86.741)
 		(width 0.5)
 		(layer "F.Cu")
-		(net 6)
+		(net "/Led5")
 		(uuid "1f9aaf32-6713-46cc-9ebd-c5e89c0a3ae8")
 	)
 	(segment
@@ -18546,7 +19147,7 @@
 		(end 84.836 86.36)
 		(width 0.5)
 		(layer "F.Cu")
-		(net 6)
+		(net "/Led5")
 		(uuid "d5de5514-5f11-4281-b6dc-f00497c2c146")
 	)
 	(segment
@@ -18554,7 +19155,7 @@
 		(end 86.995 27.305)
 		(width 0.5)
 		(layer "F.Cu")
-		(net 6)
+		(net "/Led5")
 		(uuid "db27c048-9250-47c2-813e-039c296e9b49")
 	)
 	(via
@@ -18562,7 +19163,17 @@
 		(size 0.6)
 		(drill 0.3)
 		(layers "F.Cu" "B.Cu")
-		(net 6)
+		(capping no)
+		(covering
+			(front no)
+			(back no)
+		)
+		(plugging
+			(front no)
+			(back no)
+		)
+		(filling no)
+		(net "/Led5")
 		(uuid "f7b998d5-da6c-4daf-b4f7-6e4f821ef866")
 	)
 	(segment
@@ -18570,7 +19181,7 @@
 		(end 84.836 73.025)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 6)
+		(net "/Led5")
 		(uuid "03d445a0-eb9d-4610-9a0f-a1091d901ccf")
 	)
 	(segment
@@ -18578,7 +19189,7 @@
 		(end 84.836 65.532)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 6)
+		(net "/Led5")
 		(uuid "0b1ea3f0-9fc1-4c61-8dc7-8818dab759f2")
 	)
 	(segment
@@ -18586,7 +19197,7 @@
 		(end 84.836 50.165)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 6)
+		(net "/Led5")
 		(uuid "104f7bd3-ecba-4a5c-9c7e-c8a66853757c")
 	)
 	(segment
@@ -18594,7 +19205,7 @@
 		(end 84.836 50.165)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 6)
+		(net "/Led5")
 		(uuid "131b574e-e541-48f8-bbbf-452f753af9b6")
 	)
 	(segment
@@ -18602,7 +19213,7 @@
 		(end 84.836 34.925)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 6)
+		(net "/Led5")
 		(uuid "160ab110-9e75-4ed5-b4b5-c4ebcf3c10ba")
 	)
 	(segment
@@ -18610,7 +19221,7 @@
 		(end 84.836 80.899)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 6)
+		(net "/Led5")
 		(uuid "1d8846e9-7a61-4d2b-9605-a0d9d50d1825")
 	)
 	(segment
@@ -18618,7 +19229,7 @@
 		(end 84.836 73.025)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 6)
+		(net "/Led5")
 		(uuid "23efa984-ed22-4bb8-aedc-6abc3246de43")
 	)
 	(segment
@@ -18626,7 +19237,7 @@
 		(end 85.09 80.645)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 6)
+		(net "/Led5")
 		(uuid "2c2ee90a-6bff-4f39-abe7-1b6c09c2b843")
 	)
 	(segment
@@ -18634,7 +19245,7 @@
 		(end 85.344 27.305)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 6)
+		(net "/Led5")
 		(uuid "3170e1e7-e1ac-4f4f-aede-9d3a2ddce6b2")
 	)
 	(segment
@@ -18642,7 +19253,7 @@
 		(end 86.995 80.645)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 6)
+		(net "/Led5")
 		(uuid "6161b3ed-6642-4b91-b56d-5cce5a9e06b9")
 	)
 	(segment
@@ -18650,7 +19261,7 @@
 		(end 84.836 65.532)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 6)
+		(net "/Led5")
 		(uuid "818d3c5f-922d-4479-b766-fcd0176d0a1b")
 	)
 	(segment
@@ -18658,7 +19269,7 @@
 		(end 84.963 65.405)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 6)
+		(net "/Led5")
 		(uuid "9397d9aa-de5e-482e-99a4-594fd74a77c2")
 	)
 	(segment
@@ -18666,7 +19277,7 @@
 		(end 84.836 80.391)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 6)
+		(net "/Led5")
 		(uuid "9e3bdc38-8b44-410e-9d88-55d8a0e31da6")
 	)
 	(segment
@@ -18674,7 +19285,7 @@
 		(end 84.836 42.545)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 6)
+		(net "/Led5")
 		(uuid "aaecf85e-99c4-494d-902b-9a979d238724")
 	)
 	(segment
@@ -18682,7 +19293,7 @@
 		(end 84.836 27.813)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 6)
+		(net "/Led5")
 		(uuid "b3d5bbc4-216d-45be-a035-42c08c8a9083")
 	)
 	(segment
@@ -18690,7 +19301,7 @@
 		(end 84.836 57.785)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 6)
+		(net "/Led5")
 		(uuid "c23426a5-161d-4594-a571-3d3fd4ad42da")
 	)
 	(segment
@@ -18698,7 +19309,7 @@
 		(end 85.09 80.645)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 6)
+		(net "/Led5")
 		(uuid "f01bcfc0-4d79-4ff5-94d0-dbba482f7362")
 	)
 	(segment
@@ -18706,7 +19317,7 @@
 		(end 84.836 42.545)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 6)
+		(net "/Led5")
 		(uuid "f25e5e2b-3411-4d43-8d57-b42ceac3037b")
 	)
 	(segment
@@ -18714,7 +19325,7 @@
 		(end 84.836 57.785)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 6)
+		(net "/Led5")
 		(uuid "f677947d-4fdf-4b6f-8cde-6133f69ab6da")
 	)
 	(segment
@@ -18722,7 +19333,7 @@
 		(end 84.836 34.925)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 6)
+		(net "/Led5")
 		(uuid "fa1dbd5b-97f5-49e1-a22d-2d1236d87337")
 	)
 	(segment
@@ -18730,7 +19341,7 @@
 		(end 94.615 27.305)
 		(width 0.5)
 		(layer "F.Cu")
-		(net 7)
+		(net "/Led6")
 		(uuid "124334c4-4749-451e-bb78-64892b64ba72")
 	)
 	(segment
@@ -18738,7 +19349,7 @@
 		(end 92.456 86.36)
 		(width 0.5)
 		(layer "F.Cu")
-		(net 7)
+		(net "/Led6")
 		(uuid "9a78ea01-fb86-4caf-b6af-ed4a254e8e53")
 	)
 	(segment
@@ -18746,7 +19357,7 @@
 		(end 87.757 86.36)
 		(width 0.5)
 		(layer "F.Cu")
-		(net 7)
+		(net "/Led6")
 		(uuid "bf072757-ee19-495b-a44c-f94062f24989")
 	)
 	(segment
@@ -18754,7 +19365,7 @@
 		(end 86.995 87.122)
 		(width 0.5)
 		(layer "F.Cu")
-		(net 7)
+		(net "/Led6")
 		(uuid "f5f34ccb-337b-4dc6-9b1b-337d173f706f")
 	)
 	(via
@@ -18762,7 +19373,17 @@
 		(size 0.6)
 		(drill 0.3)
 		(layers "F.Cu" "B.Cu")
-		(net 7)
+		(capping no)
+		(covering
+			(front no)
+			(back no)
+		)
+		(plugging
+			(front no)
+			(back no)
+		)
+		(filling no)
+		(net "/Led6")
 		(uuid "64d91f00-d326-4e42-a380-c001845f717f")
 	)
 	(segment
@@ -18770,7 +19391,7 @@
 		(end 92.583 27.686)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 7)
+		(net "/Led6")
 		(uuid "10c2bd71-93dc-4c45-9597-a4739c9f34cc")
 	)
 	(segment
@@ -18778,7 +19399,7 @@
 		(end 92.583 80.391)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 7)
+		(net "/Led6")
 		(uuid "3264757f-8f57-46ce-9180-f3cda5179f7f")
 	)
 	(segment
@@ -18786,7 +19407,7 @@
 		(end 92.583 73.025)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 7)
+		(net "/Led6")
 		(uuid "376cfc53-9cd4-45c3-be77-962864cc198b")
 	)
 	(segment
@@ -18794,7 +19415,7 @@
 		(end 92.837 80.645)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 7)
+		(net "/Led6")
 		(uuid "42dada54-1310-493c-9186-2ca21800d9f1")
 	)
 	(segment
@@ -18802,7 +19423,7 @@
 		(end 92.837 80.645)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 7)
+		(net "/Led6")
 		(uuid "56781e11-d74f-45e8-a33c-98b587cc2e9d")
 	)
 	(segment
@@ -18810,7 +19431,7 @@
 		(end 92.583 42.545)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 7)
+		(net "/Led6")
 		(uuid "5b82ae1d-96f2-4b14-9958-52aca47a6b44")
 	)
 	(segment
@@ -18818,7 +19439,7 @@
 		(end 92.583 42.545)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 7)
+		(net "/Led6")
 		(uuid "5bdae52d-0673-4b7d-9810-8b2583667b1e")
 	)
 	(segment
@@ -18826,7 +19447,7 @@
 		(end 92.583 57.785)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 7)
+		(net "/Led6")
 		(uuid "5f2ebd46-7229-4bb1-afdd-821364b82bb5")
 	)
 	(segment
@@ -18834,7 +19455,7 @@
 		(end 94.615 80.645)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 7)
+		(net "/Led6")
 		(uuid "73bae06c-2333-42d5-8856-809ea967c98a")
 	)
 	(segment
@@ -18842,7 +19463,7 @@
 		(end 92.583 65.278)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 7)
+		(net "/Led6")
 		(uuid "742794e3-c7da-4e72-9b17-1f4111a9666e")
 	)
 	(segment
@@ -18850,7 +19471,7 @@
 		(end 92.583 50.165)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 7)
+		(net "/Led6")
 		(uuid "74c735a2-7110-497b-b5f6-2bf34a22983e")
 	)
 	(segment
@@ -18858,7 +19479,7 @@
 		(end 92.964 27.305)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 7)
+		(net "/Led6")
 		(uuid "796993d2-c763-4e28-af3b-d6a7ddb50ae1")
 	)
 	(segment
@@ -18866,7 +19487,7 @@
 		(end 92.583 73.025)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 7)
+		(net "/Led6")
 		(uuid "862834fb-b596-4cc8-9fbf-19b0baab5031")
 	)
 	(segment
@@ -18874,7 +19495,7 @@
 		(end 92.583 34.925)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 7)
+		(net "/Led6")
 		(uuid "91de3d37-2286-4307-aaab-c9c5a3792923")
 	)
 	(segment
@@ -18882,7 +19503,7 @@
 		(end 92.583 34.925)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 7)
+		(net "/Led6")
 		(uuid "a4386af9-dcd3-49b3-a9d2-b395da184738")
 	)
 	(segment
@@ -18890,7 +19511,7 @@
 		(end 92.583 65.278)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 7)
+		(net "/Led6")
 		(uuid "a55f3b32-5124-47ad-ab59-11a12fa54280")
 	)
 	(segment
@@ -18898,7 +19519,7 @@
 		(end 92.71 65.405)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 7)
+		(net "/Led6")
 		(uuid "b9b7071d-2eb4-4f6a-9ff7-2e3f3db53b7d")
 	)
 	(segment
@@ -18906,7 +19527,7 @@
 		(end 92.583 50.165)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 7)
+		(net "/Led6")
 		(uuid "bb39f838-8842-4dd0-8fad-ca56215eca3e")
 	)
 	(segment
@@ -18914,7 +19535,7 @@
 		(end 92.583 57.785)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 7)
+		(net "/Led6")
 		(uuid "fd5c78dd-d962-4c3b-a94d-1022108b69b0")
 	)
 	(segment
@@ -18922,7 +19543,7 @@
 		(end 92.837 85.979)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 7)
+		(net "/Led6")
 		(uuid "ff6a1587-00d0-4d87-94b5-5cf90cc1c5a7")
 	)
 	(segment
@@ -18930,7 +19551,7 @@
 		(end 89.535 88.138)
 		(width 0.5)
 		(layer "F.Cu")
-		(net 8)
+		(net "/Led7")
 		(uuid "29270829-97b2-490b-a8c4-9cc9f080adb5")
 	)
 	(segment
@@ -18938,7 +19559,7 @@
 		(end 100.203 87.757)
 		(width 0.5)
 		(layer "F.Cu")
-		(net 8)
+		(net "/Led7")
 		(uuid "514052ab-1da8-4aed-8bbc-7302c8c50349")
 	)
 	(segment
@@ -18946,7 +19567,7 @@
 		(end 89.916 87.757)
 		(width 0.5)
 		(layer "F.Cu")
-		(net 8)
+		(net "/Led7")
 		(uuid "ad9de6d1-e4f8-4943-b09c-88ee6ac4611b")
 	)
 	(segment
@@ -18954,7 +19575,7 @@
 		(end 100.33 87.63)
 		(width 0.5)
 		(layer "F.Cu")
-		(net 8)
+		(net "/Led7")
 		(uuid "cc495f59-11a8-4fc8-ba8e-6cdd3ed5e4b4")
 	)
 	(segment
@@ -18962,7 +19583,7 @@
 		(end 102.235 27.305)
 		(width 0.5)
 		(layer "F.Cu")
-		(net 8)
+		(net "/Led7")
 		(uuid "d71d45e3-fd5f-4ac3-9c39-086d324883b4")
 	)
 	(via
@@ -18970,7 +19591,17 @@
 		(size 0.6)
 		(drill 0.3)
 		(layers "F.Cu" "B.Cu")
-		(net 8)
+		(capping no)
+		(covering
+			(front no)
+			(back no)
+		)
+		(plugging
+			(front no)
+			(back no)
+		)
+		(filling no)
+		(net "/Led7")
 		(uuid "8ed48e35-aba4-42a0-9a4f-39b832ec34a1")
 	)
 	(segment
@@ -18978,7 +19609,7 @@
 		(end 100.33 80.645)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 8)
+		(net "/Led7")
 		(uuid "00d3794a-83eb-4a45-bf9c-53c7083958c7")
 	)
 	(segment
@@ -18986,7 +19617,7 @@
 		(end 100.203 73.025)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 8)
+		(net "/Led7")
 		(uuid "059ea78b-795c-480f-b54d-46d75dd47f6c")
 	)
 	(segment
@@ -18994,7 +19625,7 @@
 		(end 100.33 80.645)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 8)
+		(net "/Led7")
 		(uuid "20c06f4d-b88c-4ef6-92fc-65c656d0d0fc")
 	)
 	(segment
@@ -19002,7 +19633,7 @@
 		(end 100.203 57.912)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 8)
+		(net "/Led7")
 		(uuid "247436a3-d176-4540-b056-bdfcc26b3084")
 	)
 	(segment
@@ -19010,7 +19641,7 @@
 		(end 100.203 42.799)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 8)
+		(net "/Led7")
 		(uuid "4fc7fb2d-a675-419d-bc54-06511e515624")
 	)
 	(segment
@@ -19018,7 +19649,7 @@
 		(end 102.235 80.645)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 8)
+		(net "/Led7")
 		(uuid "5b08ffdf-3e5b-4462-9428-cce49864b667")
 	)
 	(segment
@@ -19026,7 +19657,7 @@
 		(end 100.584 27.305)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 8)
+		(net "/Led7")
 		(uuid "5be73401-2e6a-4fe8-bc57-bcfde68d453d")
 	)
 	(segment
@@ -19034,7 +19665,7 @@
 		(end 100.33 50.165)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 8)
+		(net "/Led7")
 		(uuid "618db07f-9c40-4cb8-af53-b0f4825667b1")
 	)
 	(segment
@@ -19042,7 +19673,7 @@
 		(end 100.33 57.785)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 8)
+		(net "/Led7")
 		(uuid "66327da5-101a-4bb9-9538-b00680abf0a2")
 	)
 	(segment
@@ -19050,7 +19681,7 @@
 		(end 100.203 42.799)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 8)
+		(net "/Led7")
 		(uuid "6b5f6224-fe41-45dd-b22b-98bb7b00e4d7")
 	)
 	(segment
@@ -19058,7 +19689,7 @@
 		(end 100.457 42.545)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 8)
+		(net "/Led7")
 		(uuid "6dede9c0-71d1-47aa-99bb-6199eebcd03f")
 	)
 	(segment
@@ -19066,7 +19697,7 @@
 		(end 100.33 34.925)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 8)
+		(net "/Led7")
 		(uuid "757ab9e1-27cc-4adb-a747-d612345eb5f8")
 	)
 	(segment
@@ -19074,7 +19705,7 @@
 		(end 100.203 50.038)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 8)
+		(net "/Led7")
 		(uuid "7f8f32ef-fc70-481a-b475-ef09851e0cb7")
 	)
 	(segment
@@ -19082,7 +19713,7 @@
 		(end 100.203 65.405)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 8)
+		(net "/Led7")
 		(uuid "81ce9790-af9a-438b-99a4-cbe7aa3a2507")
 	)
 	(segment
@@ -19090,7 +19721,7 @@
 		(end 100.203 73.025)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 8)
+		(net "/Led7")
 		(uuid "96ff2b11-80c9-48b8-8281-4e9e10bdcd46")
 	)
 	(segment
@@ -19098,7 +19729,7 @@
 		(end 100.203 80.518)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 8)
+		(net "/Led7")
 		(uuid "9ddbc61b-1c55-4811-9ae5-6f35df0f004b")
 	)
 	(segment
@@ -19106,7 +19737,7 @@
 		(end 100.203 65.405)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 8)
+		(net "/Led7")
 		(uuid "b9951ca2-5780-4a22-8baf-d738f333b697")
 	)
 	(segment
@@ -19114,7 +19745,7 @@
 		(end 100.203 35.052)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 8)
+		(net "/Led7")
 		(uuid "c5679b40-be12-42de-9d00-7bf448084874")
 	)
 	(segment
@@ -19122,7 +19753,7 @@
 		(end 100.203 35.052)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 8)
+		(net "/Led7")
 		(uuid "cc2140a7-fe30-4c8e-9fd2-d1adb7af5a98")
 	)
 	(segment
@@ -19130,7 +19761,7 @@
 		(end 100.203 50.038)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 8)
+		(net "/Led7")
 		(uuid "d161973e-c498-47bd-aa0e-75eadbed47ff")
 	)
 	(segment
@@ -19138,7 +19769,7 @@
 		(end 100.203 27.686)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 8)
+		(net "/Led7")
 		(uuid "e0189b47-1a6a-49d1-9803-f6935fac0dfe")
 	)
 	(segment
@@ -19146,7 +19777,7 @@
 		(end 100.203 57.912)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 8)
+		(net "/Led7")
 		(uuid "ff7a2211-4db1-4342-ab6d-76a9b8957881")
 	)
 	(segment
@@ -19154,7 +19785,7 @@
 		(end 54.102 37.973)
 		(width 0.5)
 		(layer "F.Cu")
-		(net 9)
+		(net "/Row2")
 		(uuid "06b0e55a-edb0-4306-b33a-d708146e468a")
 	)
 	(segment
@@ -19162,7 +19793,7 @@
 		(end 54.61 37.465)
 		(width 0.5)
 		(layer "F.Cu")
-		(net 9)
+		(net "/Row2")
 		(uuid "1102bcd9-ddcf-4785-b412-bddfeadf3caa")
 	)
 	(segment
@@ -19170,7 +19801,7 @@
 		(end 76.835 94.615)
 		(width 0.5)
 		(layer "F.Cu")
-		(net 9)
+		(net "/Row2")
 		(uuid "21fb32bd-7be0-4a6a-b8d3-9eb27a6b9313")
 	)
 	(segment
@@ -19178,7 +19809,7 @@
 		(end 61.087 94.742)
 		(width 0.5)
 		(layer "F.Cu")
-		(net 9)
+		(net "/Row2")
 		(uuid "39aa40f4-fe50-4e70-9e78-6846dda0ccd9")
 	)
 	(segment
@@ -19186,7 +19817,7 @@
 		(end 54.102 87.757)
 		(width 0.5)
 		(layer "F.Cu")
-		(net 9)
+		(net "/Row2")
 		(uuid "8707b17c-7289-48fe-8a45-0edba62d564e")
 	)
 	(segment
@@ -19194,7 +19825,7 @@
 		(end 56.515 37.465)
 		(width 0.5)
 		(layer "F.Cu")
-		(net 9)
+		(net "/Row2")
 		(uuid "a902ffe4-8906-42cf-aa8f-9a0f57aebef0")
 	)
 	(segment
@@ -19202,7 +19833,7 @@
 		(end 109.855 37.465)
 		(width 1)
 		(layer "F.Cu")
-		(net 9)
+		(net "/Row2")
 		(uuid "e9592598-845a-47ff-ab10-af893484297d")
 	)
 	(segment
@@ -19210,7 +19841,7 @@
 		(end 76.708 94.742)
 		(width 0.5)
 		(layer "F.Cu")
-		(net 9)
+		(net "/Row2")
 		(uuid "eb5fb297-c17c-41da-b5cc-376dd6f84f1f")
 	)
 	(segment
@@ -19218,7 +19849,7 @@
 		(end 79.375 93.345)
 		(width 0.5)
 		(layer "F.Cu")
-		(net 10)
+		(net "/Row3")
 		(uuid "49cb4684-83e1-41c0-b467-93d9f39b152a")
 	)
 	(segment
@@ -19226,7 +19857,7 @@
 		(end 66.917 95.492)
 		(width 0.5)
 		(layer "F.Cu")
-		(net 10)
+		(net "/Row3")
 		(uuid "4d6b78d1-b93b-43c7-868f-bc56d53d2e4d")
 	)
 	(segment
@@ -19234,7 +19865,7 @@
 		(end 109.855 45.085)
 		(width 1)
 		(layer "F.Cu")
-		(net 10)
+		(net "/Row3")
 		(uuid "558017de-efab-4a5e-b9f9-bab680ba1abe")
 	)
 	(segment
@@ -19242,7 +19873,7 @@
 		(end 67.056 95.631)
 		(width 0.5)
 		(layer "F.Cu")
-		(net 10)
+		(net "/Row3")
 		(uuid "5c5902e1-ec48-431b-9bed-7a38903d5168")
 	)
 	(segment
@@ -19250,7 +19881,7 @@
 		(end 79.375 95.377)
 		(width 0.5)
 		(layer "F.Cu")
-		(net 10)
+		(net "/Row3")
 		(uuid "a5a223e9-e17b-4058-af6c-f119d3c4b382")
 	)
 	(segment
@@ -19258,7 +19889,7 @@
 		(end 79.121 95.631)
 		(width 0.5)
 		(layer "F.Cu")
-		(net 10)
+		(net "/Row3")
 		(uuid "ec0bce04-569b-43e7-93df-6cec8b4c8836")
 	)
 	(via
@@ -19266,7 +19897,17 @@
 		(size 0.6)
 		(drill 0.3)
 		(layers "F.Cu" "B.Cu")
-		(net 10)
+		(capping no)
+		(covering
+			(front no)
+			(back no)
+		)
+		(plugging
+			(front no)
+			(back no)
+		)
+		(filling no)
+		(net "/Row3")
 		(uuid "54bead87-63d1-4ab2-8c10-37c3338de345")
 	)
 	(segment
@@ -19274,7 +19915,7 @@
 		(end 66.421 45.085)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 10)
+		(net "/Row3")
 		(uuid "4ecb02b9-4c09-47e8-b8e0-bba285518f51")
 	)
 	(segment
@@ -19282,7 +19923,7 @@
 		(end 66.802 45.466)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 10)
+		(net "/Row3")
 		(uuid "e263d9b9-f931-453e-9ce5-72dc39c35410")
 	)
 	(segment
@@ -19290,7 +19931,7 @@
 		(end 64.135 45.085)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 10)
+		(net "/Row3")
 		(uuid "fff334b2-8aee-4e95-9ab6-a45993086bd8")
 	)
 	(segment
@@ -19298,7 +19939,7 @@
 		(end 71.501 96.647)
 		(width 0.5)
 		(layer "F.Cu")
-		(net 11)
+		(net "/Row4")
 		(uuid "18cc4601-848f-4679-b32d-47d7b5f89c53")
 	)
 	(segment
@@ -19306,7 +19947,7 @@
 		(end 81.915 94.547081)
 		(width 0.5)
 		(layer "F.Cu")
-		(net 11)
+		(net "/Row4")
 		(uuid "7202be64-5643-454f-b208-d18c63aa5f5b")
 	)
 	(segment
@@ -19314,7 +19955,7 @@
 		(end 109.855 52.705)
 		(width 1)
 		(layer "F.Cu")
-		(net 11)
+		(net "/Row4")
 		(uuid "b28beafa-f1c5-4146-a97c-bfb61bd92a5b")
 	)
 	(segment
@@ -19322,7 +19963,7 @@
 		(end 79.815081 96.647)
 		(width 0.5)
 		(layer "F.Cu")
-		(net 11)
+		(net "/Row4")
 		(uuid "d3259f08-3675-43a1-9e69-bb4720d83456")
 	)
 	(via
@@ -19330,7 +19971,17 @@
 		(size 0.6)
 		(drill 0.3)
 		(layers "F.Cu" "B.Cu")
-		(net 11)
+		(capping no)
+		(covering
+			(front no)
+			(back no)
+		)
+		(plugging
+			(front no)
+			(back no)
+		)
+		(filling no)
+		(net "/Row4")
 		(uuid "45edeb01-0e43-45d2-903f-455967b411fc")
 	)
 	(segment
@@ -19338,7 +19989,7 @@
 		(end 71.501 87.249)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 11)
+		(net "/Row4")
 		(uuid "08c41276-e9a4-414f-9dd2-30ff5d2ca1db")
 	)
 	(segment
@@ -19346,7 +19997,7 @@
 		(end 74.549 84.201)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 11)
+		(net "/Row4")
 		(uuid "11580a38-ba0a-4f2a-b288-3db409aea8ad")
 	)
 	(segment
@@ -19354,7 +20005,7 @@
 		(end 71.755 52.705)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 11)
+		(net "/Row4")
 		(uuid "56e86311-a165-4a3e-88ff-2cdedbe6add6")
 	)
 	(segment
@@ -19362,7 +20013,7 @@
 		(end 73.914 52.705)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 11)
+		(net "/Row4")
 		(uuid "5b803bc4-9fa2-4a39-834d-a7c386d4df5f")
 	)
 	(segment
@@ -19370,7 +20021,7 @@
 		(end 74.549 53.34)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 11)
+		(net "/Row4")
 		(uuid "77633beb-1882-4f7f-9280-edc92b621ac7")
 	)
 	(segment
@@ -19378,7 +20029,7 @@
 		(end 109.81 60.325)
 		(width 1)
 		(layer "F.Cu")
-		(net 12)
+		(net "/Row5")
 		(uuid "829429a7-fa2c-47ed-bdcd-ae60edcbf145")
 	)
 	(segment
@@ -19386,7 +20037,7 @@
 		(end 109.81 60.325)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 12)
+		(net "/Row5")
 		(uuid "10e0bf28-b61f-4229-8b50-586d4e7b1514")
 	)
 	(segment
@@ -19394,7 +20045,7 @@
 		(end 105.156 96.139)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 12)
+		(net "/Row5")
 		(uuid "39226740-e574-4830-b0d4-eec316e48684")
 	)
 	(segment
@@ -19402,7 +20053,7 @@
 		(end 111.76 60.452)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 12)
+		(net "/Row5")
 		(uuid "48df9238-3f5b-49b1-8479-b112e1843f6e")
 	)
 	(segment
@@ -19410,7 +20061,7 @@
 		(end 111.76 84.455)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 12)
+		(net "/Row5")
 		(uuid "5665ba2d-e026-4c0a-b4fd-0cf69e01e6c5")
 	)
 	(segment
@@ -19418,7 +20069,7 @@
 		(end 85.598 96.139)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 12)
+		(net "/Row5")
 		(uuid "6c4e9fea-0522-4493-97af-b980f19a5b38")
 	)
 	(segment
@@ -19426,7 +20077,7 @@
 		(end 84.455 94.996)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 12)
+		(net "/Row5")
 		(uuid "7d7f782b-9ea6-4fb3-b5a3-908ac33e2403")
 	)
 	(segment
@@ -19434,7 +20085,7 @@
 		(end 111.633 60.325)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 12)
+		(net "/Row5")
 		(uuid "b03be74c-1dbb-477a-adc5-0051f5120be7")
 	)
 	(segment
@@ -19442,7 +20093,7 @@
 		(end 109.22 86.995)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 12)
+		(net "/Row5")
 		(uuid "ba6c76ad-fa9d-4d64-965c-cfe55070aa73")
 	)
 	(segment
@@ -19450,7 +20101,7 @@
 		(end 109.22 92.075)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 12)
+		(net "/Row5")
 		(uuid "e7998a5e-a4c9-4dc7-a446-ad32eda177dd")
 	)
 	(segment
@@ -19458,7 +20109,7 @@
 		(end 109.855 67.945)
 		(width 1)
 		(layer "F.Cu")
-		(net 13)
+		(net "/Row6")
 		(uuid "e7febf97-2f78-4ad8-bbf7-dd086e9e7b47")
 	)
 	(segment
@@ -19466,7 +20117,7 @@
 		(end 104.521 94.996)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 13)
+		(net "/Row6")
 		(uuid "3470c3a6-b2a7-4eb7-9b83-782df640209e")
 	)
 	(segment
@@ -19474,7 +20125,7 @@
 		(end 104.17 95.347)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 13)
+		(net "/Row6")
 		(uuid "643fbc38-8803-4305-8f54-e5b0049e9bd3")
 	)
 	(segment
@@ -19482,7 +20133,7 @@
 		(end 104.267 67.945)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 13)
+		(net "/Row6")
 		(uuid "8524aab7-5e80-419c-86a4-04e3ea09df73")
 	)
 	(segment
@@ -19490,7 +20141,7 @@
 		(end 86.995 94.361)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 13)
+		(net "/Row6")
 		(uuid "cce74149-7d1e-4b8f-96e3-2f2481069cc6")
 	)
 	(segment
@@ -19498,7 +20149,7 @@
 		(end 104.521 68.199)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 13)
+		(net "/Row6")
 		(uuid "e6c1ef03-3f5e-403d-a338-25a3b7bb8c41")
 	)
 	(segment
@@ -19506,7 +20157,7 @@
 		(end 87.981 95.347)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 13)
+		(net "/Row6")
 		(uuid "e7249b4f-1f23-4929-9a53-5064aa5ec752")
 	)
 	(segment
@@ -19514,7 +20165,7 @@
 		(end 102.235 67.945)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 13)
+		(net "/Row6")
 		(uuid "ee62200e-0441-4612-af80-35d8e636adf3")
 	)
 	(segment
@@ -19522,7 +20173,7 @@
 		(end 109.81 75.565)
 		(width 1)
 		(layer "F.Cu")
-		(net 14)
+		(net "/Row7")
 		(uuid "52346be0-40aa-4ff0-9531-09c6e962a3e1")
 	)
 	(segment
@@ -19530,7 +20181,7 @@
 		(end 89.947 94.646)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 14)
+		(net "/Row7")
 		(uuid "01426d35-4fa4-4bc3-bd52-df2ee1ce7eaf")
 	)
 	(segment
@@ -19538,7 +20189,7 @@
 		(end 89.535 94.234)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 14)
+		(net "/Row7")
 		(uuid "18a221de-a1df-4666-9019-d8d7a9ffa7aa")
 	)
 	(segment
@@ -19546,7 +20197,7 @@
 		(end 96.393 75.565)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 14)
+		(net "/Row7")
 		(uuid "39b9769a-27c8-4cbb-ba70-4a7874ef8092")
 	)
 	(segment
@@ -19554,7 +20205,7 @@
 		(end 96.901 94.488)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 14)
+		(net "/Row7")
 		(uuid "48d5f490-c5b8-4a16-902f-4f8070831a5e")
 	)
 	(segment
@@ -19562,7 +20213,7 @@
 		(end 96.901 76.073)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 14)
+		(net "/Row7")
 		(uuid "a4d9392e-de10-4f2f-8878-01926db80a3a")
 	)
 	(segment
@@ -19570,7 +20221,7 @@
 		(end 96.743 94.646)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 14)
+		(net "/Row7")
 		(uuid "ec2f0906-274c-4cd1-bd79-f4098b047ed5")
 	)
 	(segment
@@ -19578,7 +20229,7 @@
 		(end 94.57 75.565)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 14)
+		(net "/Row7")
 		(uuid "fa76d191-0697-4dde-b9f5-6ddbf3059c10")
 	)
 	(segment
@@ -19586,7 +20237,7 @@
 		(end 109.855 83.185)
 		(width 1)
 		(layer "F.Cu")
-		(net 15)
+		(net "/Row8")
 		(uuid "66d5d1a9-f46a-44db-b0dc-dd5998c4420f")
 	)
 	(segment
@@ -19594,7 +20245,7 @@
 		(end 94.615 93.091)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 15)
+		(net "/Row8")
 		(uuid "2ac11375-ba3f-40af-962d-587bb02ae2f5")
 	)
 	(segment
@@ -19602,7 +20253,7 @@
 		(end 94.615 83.185)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 15)
+		(net "/Row8")
 		(uuid "5f36bf37-c69c-49fd-8320-6930931097b9")
 	)
 	(segment
@@ -19610,7 +20261,7 @@
 		(end 94.361 93.345)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 15)
+		(net "/Row8")
 		(uuid "dfcb8a3b-ba2d-4310-b195-aaea4997d105")
 	)
 	(segment
@@ -19618,7 +20269,7 @@
 		(end 109.855 27.305)
 		(width 0.5)
 		(layer "F.Cu")
-		(net 17)
+		(net "/Led8")
 		(uuid "3ac6be5e-6f96-4829-accb-c8b9d7c6b5f4")
 	)
 	(segment
@@ -19626,7 +20277,7 @@
 		(end 107.95 90.551)
 		(width 0.5)
 		(layer "F.Cu")
-		(net 17)
+		(net "/Led8")
 		(uuid "8d32798f-cf4a-43a0-9d05-a511ae34de40")
 	)
 	(segment
@@ -19634,7 +20285,7 @@
 		(end 107.696 90.805)
 		(width 0.5)
 		(layer "F.Cu")
-		(net 17)
+		(net "/Led8")
 		(uuid "bbf695d8-bfde-4fc6-9143-9925b29350fe")
 	)
 	(via
@@ -19642,7 +20293,17 @@
 		(size 0.6)
 		(drill 0.3)
 		(layers "F.Cu" "B.Cu")
-		(net 17)
+		(capping no)
+		(covering
+			(front no)
+			(back no)
+		)
+		(plugging
+			(front no)
+			(back no)
+		)
+		(filling no)
+		(net "/Led8")
 		(uuid "600caf44-bda8-4bf7-ae06-c2956caf03e6")
 	)
 	(segment
@@ -19650,7 +20311,7 @@
 		(end 107.696 57.658)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 17)
+		(net "/Led8")
 		(uuid "04266df1-e0e3-4dd3-977b-3e0c1505d37a")
 	)
 	(segment
@@ -19658,7 +20319,7 @@
 		(end 107.696 80.264)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 17)
+		(net "/Led8")
 		(uuid "0ef6f28d-9498-46c3-ab5c-da9dc643c058")
 	)
 	(segment
@@ -19666,7 +20327,7 @@
 		(end 109.855 80.645)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 17)
+		(net "/Led8")
 		(uuid "10dbff93-266b-4953-a761-48361435953c")
 	)
 	(segment
@@ -19674,7 +20335,7 @@
 		(end 107.95 65.405)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 17)
+		(net "/Led8")
 		(uuid "1114c0ce-b2db-415b-acca-01fb05210aae")
 	)
 	(segment
@@ -19682,7 +20343,7 @@
 		(end 107.823 57.785)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 17)
+		(net "/Led8")
 		(uuid "15a14246-caca-423a-8db0-b6fc9f317de5")
 	)
 	(segment
@@ -19690,7 +20351,7 @@
 		(end 107.696 35.052)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 17)
+		(net "/Led8")
 		(uuid "15d9f088-3089-4a1c-87ef-74bdb7da7e66")
 	)
 	(segment
@@ -19698,7 +20359,7 @@
 		(end 107.696 50.165)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 17)
+		(net "/Led8")
 		(uuid "269b7583-1887-445b-a750-d5ffab540d28")
 	)
 	(segment
@@ -19706,7 +20367,7 @@
 		(end 107.823 34.925)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 17)
+		(net "/Led8")
 		(uuid "2caf26d2-e1bb-43b2-9d70-ad056b665f46")
 	)
 	(segment
@@ -19714,7 +20375,7 @@
 		(end 108.077 80.645)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 17)
+		(net "/Led8")
 		(uuid "46bc514b-a0a4-4f26-a1d2-bd76bcfef274")
 	)
 	(segment
@@ -19722,7 +20383,7 @@
 		(end 107.823 42.545)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 17)
+		(net "/Led8")
 		(uuid "480d1b4d-ea23-4bf3-b527-4e0e2eb40aa1")
 	)
 	(segment
@@ -19730,7 +20391,7 @@
 		(end 107.696 57.658)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 17)
+		(net "/Led8")
 		(uuid "4c1cbb2e-509a-46d9-b6f1-946fb251a3fa")
 	)
 	(segment
@@ -19738,7 +20399,7 @@
 		(end 107.696 73.025)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 17)
+		(net "/Led8")
 		(uuid "6ea50333-e90f-41e5-b1a7-b79b2e2e8fa6")
 	)
 	(segment
@@ -19746,7 +20407,7 @@
 		(end 108.077 80.645)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 17)
+		(net "/Led8")
 		(uuid "7d0a5f58-084a-446a-9c67-d348cb73d3ab")
 	)
 	(segment
@@ -19754,7 +20415,7 @@
 		(end 107.696 50.165)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 17)
+		(net "/Led8")
 		(uuid "87d0fb62-d27f-4145-a799-446aa5f51862")
 	)
 	(segment
@@ -19762,7 +20423,7 @@
 		(end 107.95 27.305)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 17)
+		(net "/Led8")
 		(uuid "896031eb-3ed8-45f5-bad4-35a6af054a72")
 	)
 	(segment
@@ -19770,7 +20431,7 @@
 		(end 107.696 27.559)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 17)
+		(net "/Led8")
 		(uuid "8d1dfa39-a162-4343-887f-8b134e3ac5fc")
 	)
 	(segment
@@ -19778,7 +20439,7 @@
 		(end 107.696 65.151)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 17)
+		(net "/Led8")
 		(uuid "a3a0be5c-96db-448c-872c-d2dbb67dae0d")
 	)
 	(segment
@@ -19786,7 +20447,7 @@
 		(end 107.95 80.772)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 17)
+		(net "/Led8")
 		(uuid "a8c754fa-9c7f-4fee-b76e-4c13efd69d3c")
 	)
 	(segment
@@ -19794,7 +20455,7 @@
 		(end 107.696 73.025)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 17)
+		(net "/Led8")
 		(uuid "b5e0aba3-5abc-46ec-a7ee-abba62ea4ad0")
 	)
 	(segment
@@ -19802,7 +20463,7 @@
 		(end 107.696 65.151)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 17)
+		(net "/Led8")
 		(uuid "c8896adc-1e0b-4b41-bceb-21b907b73103")
 	)
 	(segment
@@ -19810,7 +20471,7 @@
 		(end 107.696 35.052)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 17)
+		(net "/Led8")
 		(uuid "d985fc10-4180-4484-8e0e-ea04f39d5282")
 	)
 	(segment
@@ -19818,7 +20479,7 @@
 		(end 107.696 42.672)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 17)
+		(net "/Led8")
 		(uuid "dc37952d-bc1c-4d69-8dbf-637c1caa1206")
 	)
 	(segment
@@ -19826,12 +20487,11 @@
 		(end 107.696 42.672)
 		(width 0.5)
 		(layer "B.Cu")
-		(net 17)
+		(net "/Led8")
 		(uuid "f66ac985-6002-4dea-af90-d5d497509c23")
 	)
 	(zone
-		(net 16)
-		(net_name "GND")
+		(net "GND")
 		(layers "F.Cu" "B.Cu")
 		(uuid "aeab79a6-1ca5-4fa2-bcd9-94584d571e9f")
 		(hatch edge 0.5)
@@ -19839,10 +20499,10 @@
 			(clearance 0.5)
 		)
 		(min_thickness 0.25)
-		(filled_areas_thickness no)
 		(fill yes
 			(thermal_gap 0.5)
 			(thermal_bridge_width 0.5)
+			(island_removal_mode 0)
 		)
 		(polygon
 			(pts
