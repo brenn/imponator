@@ -83,38 +83,6 @@
       ],
       "drc_exclusions": [
         [
-          "lib_footprint_mismatch|168148000|62378000|dde8c39d-86c4-413e-90d3-1842f473fb57|00000000-0000-0000-0000-000000000000",
-          ""
-        ],
-        [
-          "lib_footprint_mismatch|168148000|67712000|f1534d30-219e-4eb8-b39a-ae70b6354401|00000000-0000-0000-0000-000000000000",
-          ""
-        ],
-        [
-          "lib_footprint_mismatch|168148000|73152000|47584060-d8e5-4785-9d17-fc604a1b7ee7|00000000-0000-0000-0000-000000000000",
-          ""
-        ],
-        [
-          "lib_footprint_mismatch|168148000|78380000|4c0c99a2-91b6-425a-aac8-97ad49d9ade5|00000000-0000-0000-0000-000000000000",
-          ""
-        ],
-        [
-          "lib_footprint_mismatch|174752000|62378000|c5be6bae-617c-4d90-abfe-28db42e26e15|00000000-0000-0000-0000-000000000000",
-          ""
-        ],
-        [
-          "lib_footprint_mismatch|174752000|67712000|e176d18f-0d9d-44b4-8bb5-f345348f197c|00000000-0000-0000-0000-000000000000",
-          ""
-        ],
-        [
-          "lib_footprint_mismatch|174752000|73046000|14dc37f5-7e2e-4c4f-8e62-a0ef537ed680|00000000-0000-0000-0000-000000000000",
-          ""
-        ],
-        [
-          "lib_footprint_mismatch|174752000|78380000|30b5e1c5-18ad-4c80-b1fd-8f846fd0a8c3|00000000-0000-0000-0000-000000000000",
-          ""
-        ],
-        [
           "silk_edge_clearance|142119585|124714000|a850ba14-d3a1-4ab8-a172-194506cac244|7d0eb604-ddef-4f79-af21-86530ecb93ed",
           ""
         ],
@@ -825,12 +793,42 @@
           "label": "Datasheet",
           "name": "Datasheet",
           "show": true
+        },
+        {
+          "group_by": false,
+          "label": "Sim.Pins",
+          "name": "Sim.Pins",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Sim.Type",
+          "name": "Sim.Type",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Sim.Device",
+          "name": "Sim.Device",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Description",
+          "name": "Description",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "#",
+          "name": "${ITEM_NUMBER}",
+          "show": false
         }
       ],
       "filter_string": "",
       "group_symbols": true,
       "include_excluded_from_bom": true,
-      "name": "Default Editing",
+      "name": "",
       "sort_asc": true,
       "sort_field": "Reference"
     },
@@ -883,7 +881,7 @@
         "uuid": "653fe1c2-85c2-4bc6-b5d3-272b51c76687"
       }
     ],
-    "used_designators": "",
+    "used_designators": "U8",
     "variants": []
   },
   "sheets": [
